@@ -4,13 +4,21 @@
 
 [![npm version](https://img.shields.io/npm/v/@revivejs/angular-loading.svg?style=flat-square)](https://www.npmjs.com/package/@revivejs/angular-loading)
 [![npm downloads](https://img.shields.io/npm/dt/@revivejs/angular-loading.svg?style=flat-square)](https://www.npmjs.com/package/@revivejs/angular-loading)
+[![npm monthly](https://img.shields.io/npm/dm/@revivejs/angular-loading.svg?style=flat-square)](https://www.npmjs.com/package/@revivejs/angular-loading)
 [![license](https://img.shields.io/npm/l/@revivejs/angular-loading.svg?style=flat-square)](https://github.com/alexandroit/angular-loading/blob/main/LICENSE)
 [![Angular 21](https://img.shields.io/badge/Angular-21-red?style=flat-square&logo=angular)](https://angular.dev)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.9-blue?style=flat-square&logo=typescript)](https://www.typescriptlang.org)
+[![GitHub stars](https://img.shields.io/github/stars/alexandroit/angular-loading.svg?style=flat-square)](https://github.com/alexandroit/angular-loading/stargazers)
 
 **[Documentation & Live Demos](https://alexandroit.github.io/angular-loading/)** | **[npm](https://www.npmjs.com/package/@revivejs/angular-loading)** | **[Issues](https://github.com/alexandroit/angular-loading/issues)** | **[Repository](https://github.com/alexandroit/angular-loading)**
 
 **Latest version:** `21.0.0`
+
+---
+
+> **Built on top of:** [@revivejs/loading](https://www.npmjs.com/package/@revivejs/loading), the framework-agnostic ReviveJS loading toolkit with modern variants, delay and minimum visible duration handling, accessibility defaults, and themeable CSS variables.
+
+---
 
 ## Why this library?
 
