@@ -1,1 +1,0 @@
-{"ast":null,"code":"export const RELEASE_LINE = {\n  angular: '21.2.x',\n  packageVersion: '21.0.0',\n  coreVersion: '0.1.1',\n  runtimeTarget: 'Angular 21 + Angular CLI',\n  docsPath: '/angular-21/'\n};","map":null,"metadata":{},"sourceType":"module","externalDependencies":[]}
