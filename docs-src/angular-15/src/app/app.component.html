@@ -1,0 +1,209 @@
+<div class="shell">
+  <section class="hero">
+    <div class="hero-card hero-main">
+      <span class="badge">Angular {{ releaseLine.angular }} · @revivejs/loading {{ releaseLine.coreVersion }}</span>
+      <h1>@revivejs/angular-loading</h1>
+      <p>
+        A maintained Angular wrapper around the ReviveJS loading toolkit. Use a component for direct templates,
+        a directive for cards and buttons, and a service for fullscreen or ad-hoc loading states.
+      </p>
+      <div class="feature-grid">
+        <div class="feature">
+          <strong>Component API</strong>
+          Render loaders declaratively or wrap projected content.
+        </div>
+        <div class="feature">
+          <strong>Directive API</strong>
+          Attach loading behavior to cards, tables, and buttons.
+        </div>
+        <div class="feature">
+          <strong>Service API</strong>
+          Create fullscreen or programmatic loaders when the template is not enough.
+        </div>
+        <div class="feature">
+          <strong>Core fidelity</strong>
+          The wrapper passes through the same modern variants and anti-flicker options.
+        </div>
+      </div>
+      <div class="cta-row">
+        <a class="btn" href="#demos">See demos</a>
+        <a class="btn secondary" href="https://github.com/alexandroit/angular-loading#readme" target="_blank">README</a>
+      </div>
+    </div>
+
+    <div class="hero-card hero-setup">
+      <h2>Setup in 3 steps</h2>
+
+      <div class="step">
+        <span class="step-num">1</span>
+        <div>
+          <strong>Install</strong>
+          <pre [textContent]="installSnippet"></pre>
+        </div>
+      </div>
+
+      <div class="step">
+        <span class="step-num">2</span>
+        <div>
+          <strong>Register the module</strong>
+<pre [textContent]="moduleSnippet"></pre>
+        </div>
+      </div>
+
+      <div class="step">
+        <span class="step-num">3</span>
+        <div>
+          <strong>Use the wrapper</strong>
+<pre [textContent]="directiveSnippet"></pre>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="layout" id="demos">
+    <div class="panels">
+      <article class="panel">
+        <div class="panel-header">
+          <h2>Core wrapper demos</h2>
+          <p>This Angular line covers the most practical loading patterns for enterprise apps and SaaS screens.</p>
+        </div>
+
+        <div class="demo-grid">
+          <section class="demo-card">
+            <h3>Standalone component</h3>
+            <p>Use the component directly when the loader itself is the main thing you want to render.</p>
+<pre class="code" [textContent]="componentSnippet"></pre>
+            <div class="preview-frame component-frame">
+              <revive-loading
+                [visible]="true"
+                [options]="basicOptions"
+                (create)="onCreate('Standalone component')"
+                (shown)="onShown('Standalone component')"></revive-loading>
+            </div>
+          </section>
+
+          <section class="demo-card">
+            <h3>Directive overlay on a card</h3>
+            <p>The directive is the best fit for cards, panels, and existing containers.</p>
+<pre class="code" [textContent]="directiveSnippet"></pre>
+            <div class="controls">
+              <button (click)="toggleOverlay()">Toggle overlay</button>
+            </div>
+            <div class="surface-card"
+                 [reviveLoading]="overlayVisible"
+                 [loadingOptions]="overlayOptions"
+                 (create)="onCreate('Card overlay')"
+                 (shown)="onShown('Card overlay')"
+                 (hidden)="onHidden('Card overlay')">
+              <span class="surface-eyebrow">Revenue</span>
+              <div class="surface-metric">$128,400</div>
+              <div class="surface-trend">+12.8% vs previous week</div>
+            </div>
+          </section>
+
+          <section class="demo-card">
+            <h3>Button loading state</h3>
+            <p>The directive also works well on buttons with compact inline variants and no visible label.</p>
+            <div class="controls">
+              <button class="primary-action"
+                      [reviveLoading]="buttonLoading"
+                      [loadingOptions]="buttonOptions"
+                      (click)="triggerButton()"
+                      (shown)="onShown('Button loader')"
+                      (hidden)="onHidden('Button loader')">
+                Save changes
+              </button>
+            </div>
+          </section>
+
+          <section class="demo-card">
+            <h3>Service-driven fullscreen</h3>
+            <p>When the loader must be triggered imperatively, use the Angular service and the core instance underneath.</p>
+            <div class="controls">
+              <button (click)="showFullscreen()">Show fullscreen demo</button>
+            </div>
+<pre class="code" [textContent]="serviceSnippet"></pre>
+          </section>
+
+          <section class="demo-card full">
+            <h3>Table refresh with directive</h3>
+            <p>Overlay a data region without replacing the underlying layout.</p>
+            <div class="controls">
+              <button (click)="refreshTable()">Refresh table</button>
+            </div>
+            <div class="table-shell"
+                 [reviveLoading]="tableVisible"
+                 [loadingOptions]="tableOptions"
+                 (shown)="onShown('Table refresh')"
+                 (hidden)="onHidden('Table refresh')">
+              <div class="table-head">
+                <span>Status</span>
+                <span>Team</span>
+                <span>Region</span>
+                <span>MRR</span>
+              </div>
+              <div class="table-row">
+                <span>Live</span>
+                <span>Growth</span>
+                <span>North America</span>
+                <span>$42,300</span>
+              </div>
+              <div class="table-row">
+                <span>Live</span>
+                <span>Retention</span>
+                <span>Europe</span>
+                <span>$31,900</span>
+              </div>
+              <div class="table-row">
+                <span>Pending</span>
+                <span>Enterprise</span>
+                <span>LATAM</span>
+                <span>$19,440</span>
+              </div>
+            </div>
+          </section>
+        </div>
+      </article>
+
+      <article class="panel">
+        <div class="panel-header">
+          <h2>API reference</h2>
+          <p>The wrapper is intentionally thin. Angular gives you structure; the core library supplies the variants and behavior.</p>
+        </div>
+        <div class="api-grid">
+          <section class="api-card" *ngFor="let item of apiCards">
+            <h3>{{ item.title }}</h3>
+            <p>{{ item.summary }}</p>
+          </section>
+        </div>
+      </article>
+
+      <playground-panel></playground-panel>
+    </div>
+
+    <aside class="sidebar">
+      <section class="sidebar-card">
+        <div class="panel-header">
+          <h2>Event log</h2>
+          <button class="ghost-button" (click)="clearLog()">Clear</button>
+        </div>
+        <div class="log-list">
+          <div class="log-item" *ngFor="let log of logs">{{ log }}</div>
+        </div>
+      </section>
+
+      <section class="sidebar-card">
+        <div class="panel-header">
+          <h2>Release line</h2>
+        </div>
+        <ul class="release-meta">
+          <li><strong>Angular:</strong> {{ releaseLine.angular }}</li>
+          <li><strong>Package:</strong> {{ releaseLine.packageVersion }}</li>
+          <li><strong>Core:</strong> {{ releaseLine.coreVersion }}</li>
+          <li><strong>Runtime:</strong> {{ releaseLine.runtimeTarget }}</li>
+          <li><strong>Docs path:</strong> {{ releaseLine.docsPath }}</li>
+        </ul>
+      </section>
+    </aside>
+  </section>
+</div>

@@ -1,0 +1,8 @@
+{
+  "name": "@revivejs/angular-loading-docs-angular2",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "build": "echo \"Angular 2 docs are assembled through the root build script.\""
+  }
+}

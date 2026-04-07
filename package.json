@@ -1,0 +1,102 @@
+{
+  "name": "@revivejs/angular-loading",
+  "version": "21.0.0",
+  "description": "Maintained Angular wrapper components, directives, and service helpers for @revivejs/loading.",
+  "main": "fesm2022/revivejs-angular-loading.mjs",
+  "module": "fesm2022/revivejs-angular-loading.mjs",
+  "types": "types/revivejs-angular-loading.d.ts",
+  "sideEffects": false,
+  "files": [
+    "dist",
+    "docs",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "npm run build:legacy && npm run build:lib",
+    "build:legacy": "tsc -p tsconfig.legacy.json",
+    "build:lib": "ng-packagr -p ng-package.json",
+    "docs:generate": "node scripts/generate-angular-doc-lines.js",
+    "docs:install:angular-2": "echo \"Angular 2 docs are static for this historical line.\"",
+    "docs:install:angular-21": "node scripts/run-angular-doc-line.js install 21",
+    "build:docs:angular-2": "node scripts/build-docs-angular-2.js",
+    "build:docs:angular-21": "node scripts/run-angular-doc-line.js build 21",
+    "build:docs": "npm run build:legacy && npm run docs:generate && npm run build:docs:angular-2 && npm run build:docs:angular-21 && node scripts/write-docs-root.js",
+    "serve:docs": "python3 -m http.server 8081 --directory docs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alexandroit/angular-loading.git"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "keywords": [
+    "angular",
+    "angular-loading",
+    "angular-loader",
+    "angular-spinner",
+    "angular-overlay",
+    "angular-fullscreen-loader",
+    "angular-button-loader",
+    "angular-directive",
+    "angular-component",
+    "angular-service",
+    "angular4",
+    "angular5",
+    "angular6",
+    "angular7",
+    "angular8",
+    "angular9",
+    "angular10",
+    "angular11",
+    "angular12",
+    "angular13",
+    "angular14",
+    "angular15",
+    "angular16",
+    "angular17",
+    "angular18",
+    "angular19",
+    "angular20",
+    "angular21",
+    "loading",
+    "loader",
+    "loading-state",
+    "loading-indicator",
+    "spinner",
+    "overlay",
+    "fullscreen-loader",
+    "button-loader",
+    "inline-loader",
+    "progress-ui",
+    "accessibility",
+    "typescript",
+    "ui-library",
+    "revivejs"
+  ],
+  "author": "Alexandro Marques",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/alexandroit/angular-loading/issues"
+  },
+  "homepage": "https://alexandroit.github.io/angular-loading/",
+  "peerDependencies": {
+    "@angular/common": ">=4.0.0 <22.0.0",
+    "@angular/core": ">=4.0.0 <22.0.0",
+    "@angular/platform-browser": ">=4.0.0 <22.0.0"
+  },
+  "dependencies": {
+    "@revivejs/loading": "^0.1.1"
+  },
+  "devDependencies": {
+    "@angular/common": "^21.2.7",
+    "@angular/compiler": "^21.2.7",
+    "@angular/compiler-cli": "^21.2.7",
+    "@angular/core": "^21.2.7",
+    "@angular/platform-browser": "^21.2.7",
+    "@angular/platform-browser-dynamic": "^21.2.7",
+    "ng-packagr": "^21.2.2",
+    "typescript": "~5.9.3"
+  }
+}

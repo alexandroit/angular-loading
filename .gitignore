@@ -1,0 +1,6 @@
+node_modules/
+docs-src/**/node_modules/
+docs-src/**/dist/
+dist/
+*.log
+*.tgz

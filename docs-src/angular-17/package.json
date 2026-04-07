@@ -1,0 +1,32 @@
+{
+  "name": "@revivejs/angular-loading-docs-angular17",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "ng": "node ./node_modules/@angular/cli/bin/ng",
+    "start": "node ./node_modules/@angular/cli/bin/ng serve",
+    "build": "node ./node_modules/@angular/cli/bin/ng build --configuration production --output-path ../../docs/angular-17 --base-href ./"
+  },
+  "dependencies": {
+    "@angular/common": "^17.3.12",
+    "@angular/compiler": "^17.3.12",
+    "@angular/core": "^17.3.12",
+    "@angular/forms": "^17.3.12",
+    "@angular/platform-browser": "^17.3.12",
+    "@angular/platform-browser-dynamic": "^17.3.12",
+    "@revivejs/angular-loading": "^17.0.0",
+    "@revivejs/loading": "^0.1.1",
+    "core-js": "^2.6.12",
+    "rxjs": "^7.8.2",
+    "zone.js": "~0.14.10",
+    "tslib": "^2.3.0"
+  },
+  "devDependencies": {
+    "@angular/cli": "17.3.17",
+    "@angular/compiler-cli": "^17.3.12",
+    "@types/node": "12.12.54",
+    "typescript": "~5.4.5",
+    "@angular-devkit/build-angular": "~17.3.17",
+    "@types/minimatch": "3.0.3"
+  }
+}
