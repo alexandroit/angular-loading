@@ -149,6 +149,20 @@ pre,
   font-size: 13px;
 }
 
+.code-snippet {
+  margin-top: 10px;
+}
+
+.code-snippet-head {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 8px;
+}
+
+.copy-button {
+  min-width: 88px;
+}
+
 .layout {
   display: grid;
   grid-template-columns: minmax(0, 1fr) 320px;

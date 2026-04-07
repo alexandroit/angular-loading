@@ -41,6 +41,14 @@ export class AppComponent {
   directiveSnippet: string = "<div [reviveLoading]=\"isLoading\"\n     [loadingOptions]=\"{ overlay: true }\">\n  ...\n</div>";
   componentSnippet: string = "<revive-loading\n  [visible]=\"true\"\n  [options]=\"basicOptions\">\n</revive-loading>";
   serviceSnippet: string = "this.fullscreenLoader = this.loadingService.create(document.body, {\n  fullscreen: true,\n  centered: true,\n  variant: 'galaxy'\n});\n\nthis.fullscreenLoader.show();";
+  copyLabels: { [key: string]: string } = {
+    install: 'Copy',
+    module: 'Copy',
+    directiveSetup: 'Copy',
+    component: 'Copy',
+    directiveDemo: 'Copy',
+    service: 'Copy'
+  };
 
   basicOptions: Object = {
     variant: 'orbit',
@@ -162,6 +170,30 @@ export class AppComponent {
   clearLog(): void {
     this.logs = [];
     this.log('Log cleared.');
+  }
+
+  copySnippet(key: string, value: string): void {
+    var textarea = document.createElement('textarea');
+
+    textarea.value = value;
+    textarea.setAttribute('readonly', 'true');
+    textarea.style.position = 'absolute';
+    textarea.style.left = '-9999px';
+    document.body.appendChild(textarea);
+    textarea.select();
+
+    try {
+      document.execCommand('copy');
+      this.copyLabels[key] = 'Copied';
+    } catch (error) {
+      this.copyLabels[key] = 'Copy failed';
+    }
+
+    document.body.removeChild(textarea);
+
+    setTimeout(() => {
+      this.copyLabels[key] = 'Copy';
+    }, 1200);
   }
 
   isCurrentRelease(docsPath: string): boolean {

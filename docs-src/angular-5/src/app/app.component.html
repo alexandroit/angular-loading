@@ -38,7 +38,12 @@
         <span class="step-num">1</span>
         <div>
           <strong>Install</strong>
-          <pre [textContent]="installSnippet"></pre>
+          <div class="code-snippet">
+            <div class="code-snippet-head">
+              <button class="ghost-button copy-button" (click)="copySnippet('install', installSnippet)">{{ copyLabels.install }}</button>
+            </div>
+            <pre [textContent]="installSnippet"></pre>
+          </div>
         </div>
       </div>
 
@@ -46,7 +51,12 @@
         <span class="step-num">2</span>
         <div>
           <strong>Register the module</strong>
-<pre [textContent]="moduleSnippet"></pre>
+          <div class="code-snippet">
+            <div class="code-snippet-head">
+              <button class="ghost-button copy-button" (click)="copySnippet('module', moduleSnippet)">{{ copyLabels.module }}</button>
+            </div>
+            <pre [textContent]="moduleSnippet"></pre>
+          </div>
         </div>
       </div>
 
@@ -54,7 +64,12 @@
         <span class="step-num">3</span>
         <div>
           <strong>Use the wrapper</strong>
-<pre [textContent]="directiveSnippet"></pre>
+          <div class="code-snippet">
+            <div class="code-snippet-head">
+              <button class="ghost-button copy-button" (click)="copySnippet('directiveSetup', directiveSnippet)">{{ copyLabels.directiveSetup }}</button>
+            </div>
+            <pre [textContent]="directiveSnippet"></pre>
+          </div>
         </div>
       </div>
     </div>
@@ -72,7 +87,12 @@
           <section class="demo-card">
             <h3>Standalone component</h3>
             <p>Use the component directly when the loader itself is the main thing you want to render.</p>
-<pre class="code" [textContent]="componentSnippet"></pre>
+            <div class="code-snippet">
+              <div class="code-snippet-head">
+                <button class="ghost-button copy-button" (click)="copySnippet('component', componentSnippet)">{{ copyLabels.component }}</button>
+              </div>
+              <pre class="code" [textContent]="componentSnippet"></pre>
+            </div>
             <div class="preview-frame component-frame">
               <revive-loading
                 [visible]="true"
@@ -85,7 +105,12 @@
           <section class="demo-card">
             <h3>Directive overlay on a card</h3>
             <p>The directive is the best fit for cards, panels, and existing containers.</p>
-<pre class="code" [textContent]="directiveSnippet"></pre>
+            <div class="code-snippet">
+              <div class="code-snippet-head">
+                <button class="ghost-button copy-button" (click)="copySnippet('directiveDemo', directiveSnippet)">{{ copyLabels.directiveDemo }}</button>
+              </div>
+              <pre class="code" [textContent]="directiveSnippet"></pre>
+            </div>
             <div class="controls">
               <button (click)="toggleOverlay()">Toggle overlay</button>
             </div>
@@ -122,7 +147,12 @@
             <div class="controls">
               <button (click)="showFullscreen()">Show fullscreen demo</button>
             </div>
-<pre class="code" [textContent]="serviceSnippet"></pre>
+            <div class="code-snippet">
+              <div class="code-snippet-head">
+                <button class="ghost-button copy-button" (click)="copySnippet('service', serviceSnippet)">{{ copyLabels.service }}</button>
+              </div>
+              <pre class="code" [textContent]="serviceSnippet"></pre>
+            </div>
           </section>
 
           <section class="demo-card full">
