@@ -338,7 +338,7 @@ if (content.locals) {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /tmp/revivejs-angular-loading-docs-8-fqJqVR/src/styles.css */"./src/styles.css");
+module.exports = __webpack_require__(/*! /tmp/revivejs-angular-loading-docs-8-RwXsCu/src/styles.css */"./src/styles.css");
 
 
 /***/ })

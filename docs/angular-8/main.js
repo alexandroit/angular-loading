@@ -813,7 +813,7 @@ Object(_angular_platform_browser_dynamic__WEBPACK_IMPORTED_MODULE_0__["platformB
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /tmp/revivejs-angular-loading-docs-8-fqJqVR/src/main.ts */"./src/main.ts");
+module.exports = __webpack_require__(/*! /tmp/revivejs-angular-loading-docs-8-RwXsCu/src/main.ts */"./src/main.ts");
 
 
 /***/ })
