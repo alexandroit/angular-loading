@@ -1,6 +1,6 @@
 {
   "name": "@revivejs/angular-loading",
-  "version": "21.0.0",
+  "version": "21.0.1",
   "description": "Maintained Angular wrapper components, directives, and service helpers for @revivejs/loading.",
   "main": "./dist/fesm2022/revivejs-angular-loading.mjs",
   "module": "./dist/fesm2022/revivejs-angular-loading.mjs",
