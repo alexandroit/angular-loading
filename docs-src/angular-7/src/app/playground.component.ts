@@ -1,6 +1,21 @@
 import { Component } from '@angular/core';
 
-import { loaderVariants } from '@revivejs/loading';
+var legacyVariantValues: string[] = ["ring","dual-ring","segmented-ring","arc","orbit","comet","halo","radar","astronaut","astronaut-to-mars","baseball-player","football-player","galaxy","pulse","wave-dots","bouncing-dots","typing-dots","grid-pulse","magnetic-dots","spiral-dots","constellation","equalizer-bars","rising-bars","shimmer","scan-line","liquid-pill","ripple-stack","minimal-spinner","neon-spinner","glass-spinner","vortex","cube","diamond","prism","skeleton-blocks"];
+
+function toLegacyVariantLabel(value: string): string {
+  return value.split('-').map(function (part: string) {
+    return part.charAt(0).toUpperCase() + part.slice(1);
+  }).join(' ');
+}
+
+var loadingCore: any = {
+  loaderVariants: legacyVariantValues.map(function (value: string) {
+    return {
+      value: value,
+      label: toLegacyVariantLabel(value)
+    };
+  })
+};
 
 interface PlaygroundVariant {
   value: string;
@@ -34,7 +49,7 @@ interface PlaygroundState {
   styleUrls: ['./playground.component.css']
 })
 export class PlaygroundComponent {
-  variants: PlaygroundVariant[] = (loaderVariants || []).map(function (variant: any) {
+  variants: PlaygroundVariant[] = (loadingCore.loaderVariants || []).map(function (variant: any) {
     return {
       value: variant.value,
       label: variant.label

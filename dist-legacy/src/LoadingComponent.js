@@ -22,7 +22,7 @@ var LoadingComponent = /** @class */ (function () {
         this.hidden = new core_1.EventEmitter();
         this.updated = new core_1.EventEmitter();
         this.destroyed = new core_1.EventEmitter();
-        this.hostIndex = LoadingComponent_1.nextHostId++;
+        this.hostId = 'rvl-component-' + (++LoadingComponent_1.nextHostId);
         this.initialized = false;
         this.controller = null;
         this.hooks = {
@@ -92,7 +92,7 @@ var LoadingComponent = /** @class */ (function () {
     };
     LoadingComponent.prototype.resolveHostElement = function () {
         if (typeof document !== 'undefined') {
-            return document.querySelectorAll('revive-loading')[this.hostIndex];
+            return document.querySelector('[data-rvl-component-host="' + this.hostId + '"]');
         }
         return null;
     };
@@ -126,6 +126,10 @@ var LoadingComponent = /** @class */ (function () {
         (0, core_1.Output)(),
         __metadata("design:type", Object)
     ], LoadingComponent.prototype, "destroyed", void 0);
+    __decorate([
+        (0, core_1.HostBinding)('attr.data-rvl-component-host'),
+        __metadata("design:type", String)
+    ], LoadingComponent.prototype, "hostId", void 0);
     LoadingComponent = LoadingComponent_1 = __decorate([
         (0, core_1.Component)({
             selector: 'revive-loading',

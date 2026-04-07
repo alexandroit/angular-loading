@@ -8,23 +8,22 @@
     "build": "node ./node_modules/@angular/cli/bin/ng build --target=development --environment=dev --output-path ../../docs/angular-5 --base-href ./"
   },
   "dependencies": {
-    "@angular/common": "^5.2.11",
-    "@angular/compiler": "^5.2.11",
-    "@angular/core": "^5.2.11",
-    "@angular/forms": "^5.2.11",
-    "@angular/platform-browser": "^5.2.11",
-    "@angular/platform-browser-dynamic": "^5.2.11",
-    "@revivejs/angular-loading": "^5.0.0",
-    "@revivejs/loading": "^0.1.1",
-    "core-js": "^2.4.1",
-    "rxjs": "^5.5.12",
-    "zone.js": "^0.8.29",
-    "@angular/http": "^5.2.11"
+    "@angular/common": "5.2.11",
+    "@angular/compiler": "5.2.11",
+    "@angular/core": "5.2.11",
+    "@angular/forms": "5.2.11",
+    "@angular/platform-browser": "5.2.11",
+    "@angular/platform-browser-dynamic": "5.2.11",
+    "@revivejs/angular-loading": "5.0.0",
+    "core-js": "2.4.1",
+    "rxjs": "5.5.12",
+    "zone.js": "0.8.29",
+    "@angular/http": "5.2.11"
   },
   "devDependencies": {
     "@angular/cli": "1.7.4",
-    "@angular/compiler-cli": "^5.2.11",
+    "@angular/compiler-cli": "5.2.11",
     "@types/node": "6.0.60",
-    "typescript": "~2.6.2"
+    "typescript": "2.6.2"
   }
 }

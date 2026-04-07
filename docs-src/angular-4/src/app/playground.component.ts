@@ -1,8 +1,21 @@
 import { Component } from '@angular/core';
 
-declare var require: any;
+var legacyVariantValues: string[] = ["ring","dual-ring","segmented-ring","arc","orbit","comet","halo","radar","astronaut","astronaut-to-mars","baseball-player","football-player","galaxy","pulse","wave-dots","bouncing-dots","typing-dots","grid-pulse","magnetic-dots","spiral-dots","constellation","equalizer-bars","rising-bars","shimmer","scan-line","liquid-pill","ripple-stack","minimal-spinner","neon-spinner","glass-spinner","vortex","cube","diamond","prism","skeleton-blocks"];
 
-var loadingCore: any = require('@revivejs/loading');
+function toLegacyVariantLabel(value: string): string {
+  return value.split('-').map(function (part: string) {
+    return part.charAt(0).toUpperCase() + part.slice(1);
+  }).join(' ');
+}
+
+var loadingCore: any = {
+  loaderVariants: legacyVariantValues.map(function (value: string) {
+    return {
+      value: value,
+      label: toLegacyVariantLabel(value)
+    };
+  })
+};
 
 interface PlaygroundVariant {
   value: string;

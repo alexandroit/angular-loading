@@ -2,7 +2,7 @@ const angularDocLines = {
   4: {
     angular: '4.4.7',
     cli: '1.4.10',
-    typescript: '2.4.2',
+    typescript: '2.3.4',
     rxjs: '5.5.12',
     zone: '0.8.29',
     coreJs: '2.4.1',

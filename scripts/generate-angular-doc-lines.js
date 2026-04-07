@@ -7,6 +7,43 @@ const rootDir = path.resolve(__dirname, '..');
 const angular2SrcDir = path.join(rootDir, 'docs-src', 'angular-2', 'src');
 const angular2AppDir = path.join(angular2SrcDir, 'app');
 const rootPackage = JSON.parse(fs.readFileSync(path.join(rootDir, 'package.json'), 'utf8'));
+const legacyVariantValues = [
+  'ring',
+  'dual-ring',
+  'segmented-ring',
+  'arc',
+  'orbit',
+  'comet',
+  'halo',
+  'radar',
+  'astronaut',
+  'astronaut-to-mars',
+  'baseball-player',
+  'football-player',
+  'galaxy',
+  'pulse',
+  'wave-dots',
+  'bouncing-dots',
+  'typing-dots',
+  'grid-pulse',
+  'magnetic-dots',
+  'spiral-dots',
+  'constellation',
+  'equalizer-bars',
+  'rising-bars',
+  'shimmer',
+  'scan-line',
+  'liquid-pill',
+  'ripple-stack',
+  'minimal-spinner',
+  'neon-spinner',
+  'glass-spinner',
+  'vortex',
+  'cube',
+  'diamond',
+  'prism',
+  'skeleton-blocks'
+];
 
 function ensureDirectory(targetPath) {
   if (fs.existsSync(targetPath)) {
@@ -58,23 +95,51 @@ function modernizeComponentSource(contents) {
 }
 
 function createAppComponentTs(line) {
-  return modernizeComponentSource(readAngular2AppFile('app.component.ts'))
+  let contents = modernizeComponentSource(readAngular2AppFile('app.component.ts'))
     .replace('Angular 2 docs loaded successfully.', `Angular ${line} docs loaded successfully.`)
-    .replace('@Component({  selector:', '@Component({\n  selector:')
-    .replace("  selector: 'app-root',\n", "  selector: 'app-root',\n  standalone: false,\n");
+    .replace('@Component({  selector:', '@Component({\n  selector:');
+
+  if (line >= 14) {
+    contents = contents.replace("  selector: 'app-root',\n", "  selector: 'app-root',\n  standalone: false,\n");
+  }
+
+  return contents;
 }
 
 function createPlaygroundComponentTs(line) {
   let contents = modernizeComponentSource(readAngular2AppFile('playground.component.ts'))
     .replace('@Component({  selector:', '@Component({\n  selector:');
 
-  if (line >= 6) {
+  if (line >= 13) {
     contents = contents
       .replace("declare var require: any;\n\nvar loadingCore: any = require('@revivejs/loading');\n", "import { loaderVariants } from '@revivejs/loading';\n")
       .replace('(loadingCore.loaderVariants || [])', '(loaderVariants || [])');
+  } else {
+    contents = contents.replace(
+      "declare var require: any;\n\nvar loadingCore: any = require('@revivejs/loading');\n",
+      [
+        'var legacyVariantValues: string[] = ' + JSON.stringify(legacyVariantValues) + ';',
+        '',
+        'function toLegacyVariantLabel(value: string): string {',
+        "  return value.split('-').map(function (part: string) {",
+        "    return part.charAt(0).toUpperCase() + part.slice(1);",
+        "  }).join(' ');",
+        '}',
+        '',
+        'var loadingCore: any = {',
+        '  loaderVariants: legacyVariantValues.map(function (value: string) {',
+        '    return {',
+        '      value: value,',
+        '      label: toLegacyVariantLabel(value)',
+        '    };',
+        '  })',
+        '};',
+        ''
+      ].join('\n')
+    );
   }
 
-  if (line >= 13) {
+  if (line >= 14) {
     contents = contents.replace("  selector: 'playground-panel',\n", "  selector: 'playground-panel',\n  standalone: false,\n");
   }
 
@@ -148,7 +213,7 @@ function createPolyfills(line) {
     "import 'core-js/es7/reflect';"
   ];
 
-  if (line >= 21) {
+  if (line >= 17) {
     lines.push("import 'zone.js';");
   } else {
     lines.push("import 'zone.js/dist/zone';");
@@ -163,6 +228,19 @@ function createEnvironment(prod) {
     'export const environment = {',
     `  production: ${prod ? 'true' : 'false'}`,
     '};',
+    ''
+  ].join('\n');
+}
+
+function createBrowserslist() {
+  return [
+    'last 1 Chrome version',
+    'last 1 Firefox version',
+    'last 1 Safari version',
+    'last 1 Edge version',
+    '',
+    'not IE 9-11',
+    'not IE_Mob 11',
     ''
   ].join('\n');
 }
@@ -254,6 +332,28 @@ function createTsconfigApp() {
 
 function createAngularJson(line) {
   const projectName = `angular-loading-docs-angular${line}`;
+  const optionLines = [
+    `            "outputPath": "../../docs/angular-${line}",`,
+    '            "index": "src/index.html",',
+    '            "main": "src/main.ts",',
+    '            "polyfills": "src/polyfills.ts",',
+    '            "tsConfig": "src/tsconfig.app.json",',
+    '            "assets": [],',
+    '            "styles": [',
+    '              "src/styles.css"',
+    '            ],',
+    '            "scripts": []'
+  ];
+
+  if (line >= 10) {
+    optionLines[optionLines.length - 1] += ',';
+    optionLines.push(
+      '            "allowedCommonJsDependencies": [',
+      '              "@revivejs/angular-loading",',
+      '              "@revivejs/loading"',
+      '            ]'
+    );
+  }
 
   return [
     '{',
@@ -270,20 +370,7 @@ function createAngularJson(line) {
     '        "build": {',
     '          "builder": "@angular-devkit/build-angular:browser",',
     '          "options": {',
-    `            "outputPath": "../../docs/angular-${line}",`,
-    '            "index": "src/index.html",',
-    '            "main": "src/main.ts",',
-    '            "polyfills": "src/polyfills.ts",',
-    '            "tsConfig": "src/tsconfig.app.json",',
-    '            "assets": [],',
-    '            "styles": [',
-    '              "src/styles.css"',
-    '            ],',
-    '            "scripts": [],',
-    '            "allowedCommonJsDependencies": [',
-    '              "@revivejs/angular-loading",',
-    '              "@revivejs/loading"',
-    '            ]',
+    ...optionLines,
     '          },',
     '          "configurations": {',
     '            "production": {',
@@ -367,42 +454,47 @@ function createAngularCliJson(line) {
 
 function createPackageJson(line, config) {
   const dependencies = {
-    '@angular/common': `^${config.angular}`,
-    '@angular/compiler': `^${config.angular}`,
-    '@angular/core': `^${config.angular}`,
-    '@angular/forms': `^${config.angular}`,
-    '@angular/platform-browser': `^${config.angular}`,
-    '@angular/platform-browser-dynamic': `^${config.angular}`,
-    '@revivejs/angular-loading': `^${line}.0.0`,
-    '@revivejs/loading': rootPackage.dependencies['@revivejs/loading'],
-    'core-js': `^${config.coreJs}`,
-    rxjs: `^${config.rxjs}`,
-    'zone.js': line >= 6 ? `~${config.zone}` : `^${config.zone}`
+    '@angular/common': `${config.angular}`,
+    '@angular/compiler': `${config.angular}`,
+    '@angular/core': `${config.angular}`,
+    '@angular/forms': `${config.angular}`,
+    '@angular/platform-browser': `${config.angular}`,
+    '@angular/platform-browser-dynamic': `${config.angular}`,
+    '@revivejs/angular-loading': `${line}.0.0`,
+    'core-js': `${config.coreJs}`,
+    rxjs: `${config.rxjs}`,
+    'zone.js': `${config.zone}`
   };
 
+  if (line >= 13) {
+    dependencies['@revivejs/loading'] = rootPackage.dependencies['@revivejs/loading'];
+  }
+
   if (line <= 7) {
-    dependencies['@angular/http'] = `^${config.angular}`;
+    dependencies['@angular/http'] = `${config.angular}`;
   }
 
   if (config.tslib) {
-    dependencies.tslib = `^${config.tslib}`;
+    dependencies.tslib = `${config.tslib}`;
   }
 
   const devDependencies = {
     '@angular/cli': `${config.cli}`,
-    '@angular/compiler-cli': `^${config.angular}`,
+    '@angular/compiler-cli': `${config.angular}`,
     '@types/node': line <= 5 ? '6.0.60' : line <= 8 ? '8.9.4' : '12.12.54',
-    typescript: `~${config.typescript}`
+    typescript: `${config.typescript}`
   };
 
   if (config.devkit) {
-    devDependencies['@angular-devkit/build-angular'] = `~${config.devkit}`;
+    devDependencies['@angular-devkit/build-angular'] = `${config.devkit}`;
     devDependencies['@types/minimatch'] = '3.0.3';
   }
 
   const buildScript = line <= 5
     ? `ng build --target=development --environment=dev --output-path ../../docs/angular-${line} --base-href ./`
-    : line >= 13
+    : line === 8
+      ? `ng build --output-path ../../docs/angular-${line} --base-href ./ --es5BrowserSupport=false --build-optimizer=false --vendor-chunk=true --named-chunks=true --aot=false`
+    : line >= 21
       ? `ng build --configuration production --output-path ../../docs/angular-${line} --base-href ./`
       : `ng build --output-path ../../docs/angular-${line} --base-href ./ --build-optimizer=false --vendor-chunk=true --named-chunks=true --aot=false`;
 
@@ -445,6 +537,11 @@ function generateLine(line) {
   ensureDirectory(targetAppDir);
 
   writeFile(path.join(targetDir, 'package.json'), createPackageJson(line, config));
+
+  if (line >= 8) {
+    writeFile(path.join(targetDir, 'browserslist'), createBrowserslist());
+  }
+
   writeFile(path.join(targetDir, 'tsconfig.json'), createTsconfig(line));
   writeFile(path.join(targetDir, 'src', 'tsconfig.app.json'), createTsconfigApp());
   writeFile(path.join(targetDir, 'src', 'index.html'), createIndexHtml(line));

@@ -21,11 +21,7 @@
             "styles": [
               "src/styles.css"
             ],
-            "scripts": [],
-            "allowedCommonJsDependencies": [
-              "@revivejs/angular-loading",
-              "@revivejs/loading"
-            ]
+            "scripts": []
           },
           "configurations": {
             "production": {

@@ -30,7 +30,6 @@ interface PlaygroundState {
 
 @Component({
   selector: 'playground-panel',
-  standalone: false,
   templateUrl: './playground.component.html',
   styleUrls: ['./playground.component.css']
 })

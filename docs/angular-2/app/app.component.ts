@@ -15,6 +15,27 @@ declare var module: { id: string };
 export class AppComponent {
   apiCards = API_CARDS;
   releaseLine = RELEASE_LINE;
+  releaseLinks: Array<{ label: string; href: string; docsPath: string }> = [
+    { label: 'Angular 2', href: '../angular-2/', docsPath: '/angular-2/' },
+    { label: 'Angular 4', href: '../angular-4/', docsPath: '/angular-4/' },
+    { label: 'Angular 5', href: '../angular-5/', docsPath: '/angular-5/' },
+    { label: 'Angular 6', href: '../angular-6/', docsPath: '/angular-6/' },
+    { label: 'Angular 7', href: '../angular-7/', docsPath: '/angular-7/' },
+    { label: 'Angular 8', href: '../angular-8/', docsPath: '/angular-8/' },
+    { label: 'Angular 9', href: '../angular-9/', docsPath: '/angular-9/' },
+    { label: 'Angular 10', href: '../angular-10/', docsPath: '/angular-10/' },
+    { label: 'Angular 11', href: '../angular-11/', docsPath: '/angular-11/' },
+    { label: 'Angular 12', href: '../angular-12/', docsPath: '/angular-12/' },
+    { label: 'Angular 13', href: '../angular-13/', docsPath: '/angular-13/' },
+    { label: 'Angular 14', href: '../angular-14/', docsPath: '/angular-14/' },
+    { label: 'Angular 15', href: '../angular-15/', docsPath: '/angular-15/' },
+    { label: 'Angular 16', href: '../angular-16/', docsPath: '/angular-16/' },
+    { label: 'Angular 17', href: '../angular-17/', docsPath: '/angular-17/' },
+    { label: 'Angular 18', href: '../angular-18/', docsPath: '/angular-18/' },
+    { label: 'Angular 19', href: '../angular-19/', docsPath: '/angular-19/' },
+    { label: 'Angular 20', href: '../angular-20/', docsPath: '/angular-20/' },
+    { label: 'Angular 21', href: '../angular-21/', docsPath: '/angular-21/' }
+  ];
   logs: string[] = [];
   installSnippet: string = "npm install @revivejs/angular-loading";
   moduleSnippet: string = "import { LoadingModule } from '@revivejs/angular-loading';\n\n@NgModule({\n  imports: [LoadingModule.forRoot()]\n})";
@@ -142,6 +163,10 @@ export class AppComponent {
   clearLog(): void {
     this.logs = [];
     this.log('Log cleared.');
+  }
+
+  isCurrentRelease(docsPath: string): boolean {
+    return docsPath === this.releaseLine.docsPath;
   }
 
   private log(message: string): void {

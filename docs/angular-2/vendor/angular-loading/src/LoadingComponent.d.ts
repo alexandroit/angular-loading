@@ -9,7 +9,7 @@ export declare class LoadingComponent implements AfterViewInit, OnChanges, OnDes
     hidden: EventEmitter<AngularLoadingEvent>;
     updated: EventEmitter<AngularLoadingEvent>;
     destroyed: EventEmitter<AngularLoadingEvent>;
-    hostIndex: number;
+    hostId: string;
     private controller;
     private initialized;
     private hooks;

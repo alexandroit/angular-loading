@@ -313,6 +313,39 @@ pre,
   line-height: 1.8;
 }
 
+.history-copy {
+  margin-bottom: 14px;
+  color: #475569;
+  line-height: 1.7;
+}
+
+.release-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.release-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 38px;
+  padding: 0 14px;
+  border-radius: 999px;
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  background: rgba(248, 250, 252, 0.98);
+  color: #0f172a;
+  font-size: 13px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.release-link.is-current {
+  background: linear-gradient(135deg, #38bdf8, #2563eb);
+  border-color: transparent;
+  color: #ffffff;
+}
+
 @media (max-width: 1080px) {
   .hero,
   .layout {

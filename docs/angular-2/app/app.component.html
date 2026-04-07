@@ -202,6 +202,22 @@
           <li><strong>Docs path:</strong> {{ releaseLine.docsPath }}</li>
         </ul>
       </section>
+
+      <section class="sidebar-card">
+        <div class="panel-header">
+          <h2>Docs history</h2>
+        </div>
+        <p class="history-copy">Jump across every maintained wrapper line from Angular 2 through Angular 21.</p>
+        <div class="release-links">
+          <a
+            *ngFor="let release of releaseLinks"
+            class="release-link"
+            [class.is-current]="isCurrentRelease(release.docsPath)"
+            [href]="release.href">
+            {{ release.label }}
+          </a>
+        </div>
+      </section>
     </aside>
   </section>
 </div>

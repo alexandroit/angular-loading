@@ -8,23 +8,22 @@
     "build": "node ./node_modules/@angular/cli/bin/ng build --target=development --environment=dev --output-path ../../docs/angular-4 --base-href ./"
   },
   "dependencies": {
-    "@angular/common": "^4.4.7",
-    "@angular/compiler": "^4.4.7",
-    "@angular/core": "^4.4.7",
-    "@angular/forms": "^4.4.7",
-    "@angular/platform-browser": "^4.4.7",
-    "@angular/platform-browser-dynamic": "^4.4.7",
-    "@revivejs/angular-loading": "^4.0.0",
-    "@revivejs/loading": "^0.1.1",
-    "core-js": "^2.4.1",
-    "rxjs": "^5.5.12",
-    "zone.js": "^0.8.29",
-    "@angular/http": "^4.4.7"
+    "@angular/common": "4.4.7",
+    "@angular/compiler": "4.4.7",
+    "@angular/core": "4.4.7",
+    "@angular/forms": "4.4.7",
+    "@angular/platform-browser": "4.4.7",
+    "@angular/platform-browser-dynamic": "4.4.7",
+    "@revivejs/angular-loading": "4.0.0",
+    "core-js": "2.4.1",
+    "rxjs": "5.5.12",
+    "zone.js": "0.8.29",
+    "@angular/http": "4.4.7"
   },
   "devDependencies": {
     "@angular/cli": "1.4.10",
-    "@angular/compiler-cli": "^4.4.7",
+    "@angular/compiler-cli": "4.4.7",
     "@types/node": "6.0.60",
-    "typescript": "~2.4.2"
+    "typescript": "2.3.4"
   }
 }

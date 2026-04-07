@@ -2,6 +2,7 @@ import {
   AfterViewInit,
   Component,
   EventEmitter,
+  HostBinding,
   Input,
   OnChanges,
   OnDestroy,
@@ -29,7 +30,8 @@ export class LoadingComponent implements AfterViewInit, OnChanges, OnDestroy {
   @Output() updated = new EventEmitter<AngularLoadingEvent>();
   @Output() destroyed = new EventEmitter<AngularLoadingEvent>();
 
-  hostIndex: number = LoadingComponent.nextHostId++;
+  @HostBinding('attr.data-rvl-component-host')
+  hostId: string = 'rvl-component-' + (++LoadingComponent.nextHostId);
 
   private controller: LoadingController | null;
   private initialized: boolean;
@@ -121,7 +123,7 @@ export class LoadingComponent implements AfterViewInit, OnChanges, OnDestroy {
 
   private resolveHostElement(): HTMLElement | null {
     if (typeof document !== 'undefined') {
-      return document.querySelectorAll('revive-loading')[this.hostIndex] as HTMLElement | null;
+      return document.querySelector('[data-rvl-component-host="' + this.hostId + '"]') as HTMLElement | null;
     }
 
     return null;
