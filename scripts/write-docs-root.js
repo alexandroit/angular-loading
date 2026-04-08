@@ -5,6 +5,18 @@ const { listAngularDocLines } = require('./angular-doc-lines');
 
 const rootDir = path.resolve(__dirname, '..');
 const docsDir = path.join(rootDir, 'docs');
+const headTrackingSnippet = [
+  '    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6353624842390947" crossorigin="anonymous"></script>',
+  '    <!-- Google tag (gtag.js) -->',
+  '    <script async src="https://www.googletagmanager.com/gtag/js?id=G-3KQ9KECXR9"></script>',
+  '    <script>',
+  '      window.dataLayer = window.dataLayer || [];',
+  '      function gtag(){dataLayer.push(arguments);}',
+  "      gtag('js', new Date());",
+  '',
+  "      gtag('config', 'G-3KQ9KECXR9');",
+  '    </script>'
+];
 const releaseLines = [2].concat(listAngularDocLines());
 
 if (!fs.existsSync(docsDir)) {
@@ -85,6 +97,7 @@ fs.writeFileSync(
     '        .line-head { flex-direction: column; align-items: flex-start; }',
     '      }',
     '    </style>',
+    ...headTrackingSnippet,
     '  </head>',
     '  <body>',
     '    <main>',
