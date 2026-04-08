@@ -1,0 +1,15 @@
+{
+  "packageName": "@stackline/angular-loading",
+  "projectRoot": "angular-loading/angular-loading",
+  "framework": "angular",
+  "family": "angular-11",
+  "major": 11,
+  "exactVersion": "11.2.4",
+  "installMode": "npm-install",
+  "localInstallSource": "../../../dist-lib",
+  "expectedExports": [],
+  "installCommand": "npm install --ignore-scripts",
+  "validateCommand": "npm run validate",
+  "buildCommand": "npm run build",
+  "generatedAt": "2026-04-08T22:23:28.385Z"
+}

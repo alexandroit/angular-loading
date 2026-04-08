@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
-import { LoadingModule } from '@revivejs/angular-loading';
+import { LoadingModule } from '@stackline/angular-loading';
 import { AppComponent } from './app.component';
 import { PlaygroundComponent } from './playground.component';
 

@@ -1,0 +1,15 @@
+{
+  "packageName": "@stackline/angular-loading",
+  "projectRoot": "angular-loading/angular-loading",
+  "framework": "angular",
+  "family": "angular-10",
+  "major": 10,
+  "exactVersion": "10.1.5",
+  "installMode": "npm-install",
+  "localInstallSource": "../../../dist-lib",
+  "expectedExports": [],
+  "installCommand": "npm install --ignore-scripts",
+  "validateCommand": "npm run validate",
+  "buildCommand": "npm run build",
+  "generatedAt": "2026-04-08T22:23:05.832Z"
+}

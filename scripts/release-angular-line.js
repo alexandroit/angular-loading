@@ -7,7 +7,7 @@ const esbuild = require('esbuild');
 const { getAngularDocLine } = require('./angular-doc-lines');
 
 const rootDir = path.resolve(__dirname, '..');
-const packageName = '@revivejs/angular-loading';
+const packageName = '@stackline/angular-loading';
 
 function ensureDir(targetPath) {
   fs.mkdirSync(targetPath, { recursive: true });
@@ -75,7 +75,7 @@ function createLegacyPackage(line) {
   const version = `${line}.0.0`;
   const tempDir = fs.mkdtempSync(path.join(os.tmpdir(), `revivejs-angular-loading-${version}-`));
   const distLegacyDir = path.join(rootDir, 'dist-legacy');
-  const coreEntry = path.join(rootDir, 'node_modules', '@revivejs', 'loading', 'dist', 'index.js');
+  const coreEntry = path.join(rootDir, 'node_modules', '@stackline', 'loading', 'dist', 'index.js');
   const vendorDir = path.join(tempDir, 'vendor');
   const vendorEntry = path.join(vendorDir, 'loading.js');
   const packageJsonPath = path.join(tempDir, 'package.json');
@@ -102,7 +102,7 @@ function createLegacyPackage(line) {
     path.join(tempDir, 'src', 'LoadingService.js')
   ].forEach((filePath) => {
     const contents = fs.readFileSync(filePath, 'utf8')
-      .replace(/require\("@revivejs\/loading"\)/g, "require('../vendor/loading.js')");
+      .replace(/require\("@stackline\/loading"\)/g, "require('../vendor/loading.js')");
 
     fs.writeFileSync(filePath, contents);
   });
@@ -119,7 +119,7 @@ function createLegacyPackage(line) {
   writeJson(packageJsonPath, {
     name: packageName,
     version,
-    description: 'Maintained Angular wrapper components, directives, and service helpers for @revivejs/loading.',
+    description: 'Maintained Angular wrapper components, directives, and service helpers for @stackline/loading.',
     main: './index.js',
     types: './index.d.ts',
     sideEffects: false,

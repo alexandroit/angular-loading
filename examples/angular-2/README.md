@@ -1,6 +1,6 @@
 # Angular 2 Wrapper Notes
 
-This repository starts with the Angular 2 line for `@revivejs/angular-loading`.
+This repository starts with the Angular 2 line for `@stackline/angular-loading`.
 
 The live docs shell is generated into:
 

@@ -1,0 +1,15 @@
+{
+  "packageName": "@stackline/angular-loading",
+  "projectRoot": "angular-loading/angular-loading",
+  "framework": "angular",
+  "family": "angular-13",
+  "major": 13,
+  "exactVersion": "13.3.0",
+  "installMode": "npm-install",
+  "localInstallSource": "../../../dist-lib",
+  "expectedExports": [],
+  "installCommand": "npm install --ignore-scripts",
+  "validateCommand": "npm run validate",
+  "buildCommand": "npm run build",
+  "generatedAt": "2026-04-08T22:24:42.634Z"
+}

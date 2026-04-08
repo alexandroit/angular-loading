@@ -1,0 +1,24 @@
+{
+  "name": "@stackline/angular-loading-docs-angular12-12-2-5",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "validate": "node ./stackline-validate.mjs"
+  },
+  "dependencies": {
+    "@angular/common": "12.2.5",
+    "@angular/compiler": "12.2.5",
+    "@angular/core": "12.2.5",
+    "@angular/forms": "12.2.5",
+    "@angular/platform-browser": "12.2.5",
+    "@angular/platform-browser-dynamic": "12.2.5",
+    "@stackline/angular-loading": "file:../../../dist-lib",
+    "core-js": "2.6.12",
+    "rxjs": "7.8.2",
+    "zone.js": "0.11.8",
+    "tslib": "2.0.0"
+  },
+  "devDependencies": {
+    "typescript": "4.3.5"
+  }
+}

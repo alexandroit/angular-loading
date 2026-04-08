@@ -23,8 +23,8 @@
             ],
             "scripts": [],
             "allowedCommonJsDependencies": [
-              "@revivejs/angular-loading",
-              "@revivejs/loading"
+              "@stackline/angular-loading",
+              "@stackline/loading"
             ]
           },
           "configurations": {

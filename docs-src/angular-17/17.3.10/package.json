@@ -1,0 +1,25 @@
+{
+  "name": "@stackline/angular-loading-docs-angular17-17-3-10",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "validate": "node ./stackline-validate.mjs"
+  },
+  "dependencies": {
+    "@angular/common": "17.3.10",
+    "@angular/compiler": "17.3.10",
+    "@angular/core": "17.3.10",
+    "@angular/forms": "17.3.10",
+    "@angular/platform-browser": "17.3.10",
+    "@angular/platform-browser-dynamic": "17.3.10",
+    "@stackline/angular-loading": "file:../../../dist-lib",
+    "core-js": "2.6.12",
+    "rxjs": "7.8.2",
+    "zone.js": "0.14.10",
+    "@stackline/loading": "file:../../../../../loading/loading",
+    "tslib": "2.3.0"
+  },
+  "devDependencies": {
+    "typescript": "5.4.5"
+  }
+}

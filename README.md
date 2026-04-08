@@ -1,28 +1,28 @@
-# @revivejs/angular-loading
+# @stackline/angular-loading
 
-> A maintained Angular wrapper for **@revivejs/loading** with a declarative component API, a host directive for overlays and inline states, and a service for fullscreen or programmatic loaders.
+> A maintained Angular wrapper for **@stackline/loading** with a declarative component API, a host directive for overlays and inline states, and a service for fullscreen or programmatic loaders.
 
-[![npm version](https://img.shields.io/npm/v/@revivejs/angular-loading.svg?style=flat-square)](https://www.npmjs.com/package/@revivejs/angular-loading)
-[![npm downloads](https://img.shields.io/npm/dt/@revivejs/angular-loading.svg?style=flat-square)](https://www.npmjs.com/package/@revivejs/angular-loading)
-[![npm monthly](https://img.shields.io/npm/dm/@revivejs/angular-loading.svg?style=flat-square)](https://www.npmjs.com/package/@revivejs/angular-loading)
-[![license](https://img.shields.io/npm/l/@revivejs/angular-loading.svg?style=flat-square)](https://github.com/alexandroit/angular-loading/blob/main/LICENSE)
+[![npm version](https://img.shields.io/npm/v/@stackline/angular-loading.svg?style=flat-square)](https://www.npmjs.com/package/@stackline/angular-loading)
+[![npm downloads](https://img.shields.io/npm/dt/@stackline/angular-loading.svg?style=flat-square)](https://www.npmjs.com/package/@stackline/angular-loading)
+[![npm monthly](https://img.shields.io/npm/dm/@stackline/angular-loading.svg?style=flat-square)](https://www.npmjs.com/package/@stackline/angular-loading)
+[![license](https://img.shields.io/npm/l/@stackline/angular-loading.svg?style=flat-square)](https://github.com/alexandroit/angular-loading/blob/main/LICENSE)
 [![Angular 21](https://img.shields.io/badge/Angular-21-red?style=flat-square&logo=angular)](https://angular.dev)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.9-blue?style=flat-square&logo=typescript)](https://www.typescriptlang.org)
 [![GitHub stars](https://img.shields.io/github/stars/alexandroit/angular-loading.svg?style=flat-square)](https://github.com/alexandroit/angular-loading/stargazers)
 
-**[Documentation & Live Demos](https://alexandroit.github.io/angular-loading/)** | **[npm](https://www.npmjs.com/package/@revivejs/angular-loading)** | **[Issues](https://github.com/alexandroit/angular-loading/issues)** | **[Repository](https://github.com/alexandroit/angular-loading)**
+**[Documentation & Live Demos](https://alexandroit.github.io/angular-loading/)** | **[npm](https://www.npmjs.com/package/@stackline/angular-loading)** | **[Issues](https://github.com/alexandroit/angular-loading/issues)** | **[Repository](https://github.com/alexandroit/angular-loading)**
 
 **Latest version:** `21.0.0`
 
 ---
 
-> **Built on top of:** [@revivejs/loading](https://www.npmjs.com/package/@revivejs/loading), the framework-agnostic ReviveJS loading toolkit with modern variants, delay and minimum visible duration handling, accessibility defaults, and themeable CSS variables.
+> **Built on top of:** [@stackline/loading](https://www.npmjs.com/package/@stackline/loading), the framework-agnostic Stackline loading toolkit with modern variants, delay and minimum visible duration handling, accessibility defaults, and themeable CSS variables.
 
 ---
 
 ## Why this library?
 
-`@revivejs/angular-loading` brings the full ReviveJS loading toolkit into Angular apps without forcing a framework-specific visual system.
+`@stackline/angular-loading` brings the full Stackline loading toolkit into Angular apps without forcing a framework-specific visual system.
 
 It gives Angular teams three practical integration paths:
 
@@ -32,7 +32,7 @@ It gives Angular teams three practical integration paths:
 
 The wrapper stays intentionally thin so the real power continues to live in the core package:
 
-- polished variants from `@revivejs/loading`
+- polished variants from `@stackline/loading`
 - delay and `minVisible` anti-flicker behavior
 - inline, overlay, container, and fullscreen modes
 - accessibility defaults and visible labels
@@ -64,33 +64,38 @@ The wrapper stays intentionally thin so the real power continues to live in the 
 
 ## Angular Version Compatibility
 
-| Package version | Angular version | TypeScript version | Demo link |
-| :---: | :---: | :---: | :--- |
-| **21.0.0** | **21.2.x** | **5.9.x** | [Angular 21 demo](https://alexandroit.github.io/angular-loading/angular-21/) |
-| **20.0.0** | **20.3.x** | **5.9.x** | [Angular 20 demo](https://alexandroit.github.io/angular-loading/angular-20/) |
-| **19.0.0** | **19.2.x** | **5.8.x** | [Angular 19 demo](https://alexandroit.github.io/angular-loading/angular-19/) |
-| **18.0.0** | **18.2.x** | **5.5.x** | [Angular 18 demo](https://alexandroit.github.io/angular-loading/angular-18/) |
-| **17.0.0** | **17.3.x** | **5.4.x** | [Angular 17 demo](https://alexandroit.github.io/angular-loading/angular-17/) |
-| **16.0.0** | **16.2.x** | **5.1.x** | [Angular 16 demo](https://alexandroit.github.io/angular-loading/angular-16/) |
-| **15.0.0** | **15.2.x** | **4.9.x** | [Angular 15 demo](https://alexandroit.github.io/angular-loading/angular-15/) |
-| **14.0.0** | **14.3.x** | **4.8.x** | [Angular 14 demo](https://alexandroit.github.io/angular-loading/angular-14/) |
-| **13.0.0** | **13.4.x** | **4.6.x** | [Angular 13 demo](https://alexandroit.github.io/angular-loading/angular-13/) |
-| **12.0.0** | **12.2.x** | **4.3.x** | [Angular 12 demo](https://alexandroit.github.io/angular-loading/angular-12/) |
-| **11.0.0** | **11.2.x** | **4.1.x** | [Angular 11 demo](https://alexandroit.github.io/angular-loading/angular-11/) |
-| **10.0.0** | **10.2.x** | **3.9.x** | [Angular 10 demo](https://alexandroit.github.io/angular-loading/angular-10/) |
-| **9.0.0** | **9.1.x** | **3.8.x** | [Angular 9 demo](https://alexandroit.github.io/angular-loading/angular-9/) |
-| **8.0.0** | **8.2.x** | **3.5.x** | [Angular 8 demo](https://alexandroit.github.io/angular-loading/angular-8/) |
-| **7.0.0** | **7.2.x** | **3.2.x** | [Angular 7 demo](https://alexandroit.github.io/angular-loading/angular-7/) |
-| **6.0.0** | **6.1.x** | **2.7.x** | [Angular 6 demo](https://alexandroit.github.io/angular-loading/angular-6/) |
-| **5.0.0** | **5.2.x** | **2.6.x** | [Angular 5 demo](https://alexandroit.github.io/angular-loading/angular-5/) |
-| **4.0.0** | **4.4.x** | **2.4.x** | [Angular 4 demo](https://alexandroit.github.io/angular-loading/angular-4/) |
-| **2.0.0** | **2.4.x** | **2.4.x** | [Angular 2 demo](https://alexandroit.github.io/angular-loading/angular-2/) |
+Each package family only installs on its matching Angular family. Framework major and package major are not always the same package number, so use the package family column below.
+
+| Package family | Framework family | Peer range | Tested release window | Demo link |
+| :---: | :---: | :---: | :---: | :--- |
+| **21.x** | **Angular 21 only** | **`>=21.0.0 <22.0.0`** | **21.0.0 -> 21.2.8** | [Angular 21 family docs](https://alexandroit.github.io/angular-loading/angular-21/) |
+| **20.x** | **Angular 20 only** | **`>=20.0.0 <21.0.0`** | **20.0.0 -> 20.3.18** | [Angular 20 family docs](https://alexandroit.github.io/angular-loading/angular-20/) |
+| **19.x** | **Angular 19 only** | **`>=19.0.0 <20.0.0`** | **19.0.0 -> 19.2.20** | [Angular 19 family docs](https://alexandroit.github.io/angular-loading/angular-19/) |
+| **18.x** | **Angular 18 only** | **`>=18.0.0 <19.0.0`** | **18.0.0 -> 18.2.14** | [Angular 18 family docs](https://alexandroit.github.io/angular-loading/angular-18/) |
+| **17.x** | **Angular 17 only** | **`>=17.0.0 <18.0.0`** | **17.0.0 -> 17.3.12** | [Angular 17 family docs](https://alexandroit.github.io/angular-loading/angular-17/) |
+| **16.x** | **Angular 16 only** | **`>=16.0.0 <17.0.0`** | **16.0.0 -> 16.2.12** | [Angular 16 family docs](https://alexandroit.github.io/angular-loading/angular-16/) |
+| **15.x** | **Angular 15 only** | **`>=15.0.0 <16.0.0`** | **15.0.0 -> 15.2.10** | [Angular 15 family docs](https://alexandroit.github.io/angular-loading/angular-15/) |
+| **14.x** | **Angular 14 only** | **`>=14.0.0 <15.0.0`** | **14.0.0 -> 14.3.0** | [Angular 14 family docs](https://alexandroit.github.io/angular-loading/angular-14/) |
+| **13.x** | **Angular 13 only** | **`>=13.0.0 <14.0.0`** | **13.0.0 -> 13.4.0** | [Angular 13 family docs](https://alexandroit.github.io/angular-loading/angular-13/) |
+| **12.x** | **Angular 12 only** | **`>=12.0.0 <13.0.0`** | **12.0.0 -> 12.2.17** | [Angular 12 family docs](https://alexandroit.github.io/angular-loading/angular-12/) |
+| **11.x** | **Angular 11 only** | **`>=11.0.0 <12.0.0`** | **11.0.0 -> 11.2.14** | [Angular 11 family docs](https://alexandroit.github.io/angular-loading/angular-11/) |
+| **10.x** | **Angular 10 only** | **`>=10.0.0 <11.0.0`** | **10.0.0 -> 10.2.5** | [Angular 10 family docs](https://alexandroit.github.io/angular-loading/angular-10/) |
+| **9.x** | **Angular 9 only** | **`>=9.0.0 <10.0.0`** | **9.0.0 -> 9.1.13** | [Angular 9 family docs](https://alexandroit.github.io/angular-loading/angular-9/) |
+| **8.x** | **Angular 8 only** | **`>=8.0.0 <9.0.0`** | **8.0.0 -> 8.2.14** | [Angular 8 family docs](https://alexandroit.github.io/angular-loading/angular-8/) |
+| **7.x** | **Angular 7 only** | **`>=7.0.0 <8.0.0`** | **7.0.0 -> 7.2.16** | [Angular 7 family docs](https://alexandroit.github.io/angular-loading/angular-7/) |
+| **6.x** | **Angular 6 only** | **`>=6.0.0 <7.0.0`** | **6.0.0 -> 6.1.10** | [Angular 6 family docs](https://alexandroit.github.io/angular-loading/angular-6/) |
+| **5.x** | **Angular 5 only** | **`>=5.0.0 <6.0.0`** | **5.0.0 -> 5.2.11** | [Angular 5 family docs](https://alexandroit.github.io/angular-loading/angular-5/) |
+| **4.x** | **Angular 4 only** | **`>=4.0.0 <5.0.0`** | **4.0.0 -> 4.4.7** | [Angular 4 family docs](https://alexandroit.github.io/angular-loading/angular-4/) |
+| **2.x** | **Angular 2 only** | **`>=2.0.0 <3.0.0`** | **2.0.0 -> 2.4.10** | [Angular 2 family docs](https://alexandroit.github.io/angular-loading/angular-2/) |
+
 
 ## Installation
 
 ```bash
-npm install @revivejs/angular-loading
+npm install @stackline/angular-loading
 ```
+
+Choose the package family from the compatibility table above. Each published family is locked to one framework major only.
 
 ## Setup
 
@@ -99,7 +104,7 @@ npm install @revivejs/angular-loading
 ```ts
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { LoadingModule } from '@revivejs/angular-loading';
+import { LoadingModule } from '@stackline/angular-loading';
 
 import { AppComponent } from './app.component';
 
@@ -167,7 +172,7 @@ Use `LoadingService` when you need to create a loader from code:
 
 ```ts
 import { Component } from '@angular/core';
-import { LoadingService } from '@revivejs/angular-loading';
+import { LoadingService } from '@stackline/angular-loading';
 
 @Component({
   selector: 'app-root',

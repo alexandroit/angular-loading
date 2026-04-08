@@ -1,5 +1,5 @@
 {
-  "name": "@revivejs/angular-loading-docs-angular13",
+  "name": "@stackline/angular-loading-docs-angular13",
   "version": "1.0.0",
   "private": true,
   "scripts": {
@@ -14,11 +14,11 @@
     "@angular/forms": "13.4.0",
     "@angular/platform-browser": "13.4.0",
     "@angular/platform-browser-dynamic": "13.4.0",
-    "@revivejs/angular-loading": "13.0.0",
+    "@stackline/angular-loading": "13.0.0",
     "core-js": "2.6.12",
     "rxjs": "7.4.0",
     "zone.js": "0.11.8",
-    "@revivejs/loading": "^0.1.1",
+    "@stackline/loading": "^0.1.1",
     "tslib": "2.0.0"
   },
   "devDependencies": {

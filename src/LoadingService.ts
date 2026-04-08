@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { createLoader, hideLoader, mountLoader, showLoader } from '@revivejs/loading';
+import { createLoader, hideLoader, mountLoader, showLoader } from '@stackline/loading';
 
 import { AngularLoadingOptions } from './types';
 

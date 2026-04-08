@@ -5,7 +5,7 @@ const rootDir = path.resolve(__dirname, '..');
 const sourceDir = path.join(rootDir, 'docs-src', 'angular-2');
 const outputDir = path.join(rootDir, 'docs', 'angular-2');
 const wrapperDistDir = path.join(rootDir, 'dist-legacy');
-const loadingPackageDir = path.join(rootDir, 'node_modules', '@revivejs', 'loading');
+const loadingPackageDir = path.join(rootDir, 'node_modules', '@stackline', 'loading');
 const loadingCjsEntry = path.join(loadingPackageDir, 'dist', 'index.cjs');
 
 function removeDirectory(targetPath) {
@@ -65,7 +65,7 @@ if (!fs.existsSync(wrapperDistDir)) {
 }
 
 if (!fs.existsSync(loadingCjsEntry)) {
-  throw new Error('Install root dependencies before building docs so @revivejs/loading can be copied.');
+  throw new Error('Install root dependencies before building docs so @stackline/loading can be copied.');
 }
 
 removeDirectory(outputDir);

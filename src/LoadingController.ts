@@ -1,4 +1,4 @@
-import { createLoader } from '@revivejs/loading';
+import { createLoader } from '@stackline/loading';
 import { AngularLoadingEvent, AngularLoadingOptions, LoadingLifecycleHooks } from './types';
 
 export class LoadingController {

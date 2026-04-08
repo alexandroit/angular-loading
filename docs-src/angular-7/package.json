@@ -1,5 +1,5 @@
 {
-  "name": "@revivejs/angular-loading-docs-angular7",
+  "name": "@stackline/angular-loading-docs-angular7",
   "version": "1.0.0",
   "private": true,
   "scripts": {
@@ -14,7 +14,7 @@
     "@angular/forms": "7.2.16",
     "@angular/platform-browser": "7.2.16",
     "@angular/platform-browser-dynamic": "7.2.16",
-    "@revivejs/angular-loading": "7.0.0",
+    "@stackline/angular-loading": "7.0.0",
     "core-js": "2.4.1",
     "rxjs": "6.6.7",
     "zone.js": "0.8.29",

@@ -1,7 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.LoadingController = void 0;
-var loading_1 = require("@revivejs/loading");
+var loading_1 = require("@stackline/loading");
 var LoadingController = /** @class */ (function () {
     function LoadingController(host, hooks) {
         this.host = host;

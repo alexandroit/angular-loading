@@ -1,0 +1,25 @@
+{
+  "name": "@stackline/angular-loading-docs-angular19-19-2-18",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "validate": "node ./stackline-validate.mjs"
+  },
+  "dependencies": {
+    "@angular/common": "19.2.18",
+    "@angular/compiler": "19.2.18",
+    "@angular/core": "19.2.18",
+    "@angular/forms": "19.2.18",
+    "@angular/platform-browser": "19.2.18",
+    "@angular/platform-browser-dynamic": "19.2.18",
+    "@stackline/angular-loading": "file:../../../dist-lib",
+    "core-js": "2.6.12",
+    "rxjs": "7.8.2",
+    "zone.js": "0.15.1",
+    "@stackline/loading": "file:../../../../../loading/loading",
+    "tslib": "2.3.0"
+  },
+  "devDependencies": {
+    "typescript": "5.8.3"
+  }
+}

@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 
-import { loaderVariants } from '@revivejs/loading';
+import { loaderVariants } from '@stackline/loading';
 
 interface PlaygroundVariant {
   value: string;
@@ -205,7 +205,7 @@ export class PlaygroundComponent {
       '// app.module.ts',
       "import { BrowserModule } from '@angular/platform-browser';",
       "import { NgModule } from '@angular/core';",
-      "import { LoadingModule } from '@revivejs/angular-loading';",
+      "import { LoadingModule } from '@stackline/angular-loading';",
       "import { AppComponent } from './app.component';",
       '',
       '@NgModule({',
@@ -251,7 +251,7 @@ export class PlaygroundComponent {
     return [
       '// app.component.ts',
       "import { Component } from '@angular/core';",
-      "import { LoadingService } from '@revivejs/angular-loading';",
+      "import { LoadingService } from '@stackline/angular-loading';",
       '',
       '@Component({',
       "  selector: 'app-root',",

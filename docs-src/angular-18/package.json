@@ -1,5 +1,5 @@
 {
-  "name": "@revivejs/angular-loading-docs-angular18",
+  "name": "@stackline/angular-loading-docs-angular18",
   "version": "1.0.0",
   "private": true,
   "scripts": {
@@ -14,11 +14,11 @@
     "@angular/forms": "18.2.14",
     "@angular/platform-browser": "18.2.14",
     "@angular/platform-browser-dynamic": "18.2.14",
-    "@revivejs/angular-loading": "18.0.0",
+    "@stackline/angular-loading": "18.0.0",
     "core-js": "2.6.12",
     "rxjs": "7.8.2",
     "zone.js": "0.14.10",
-    "@revivejs/loading": "^0.1.1",
+    "@stackline/loading": "^0.1.1",
     "tslib": "2.3.0"
   },
   "devDependencies": {

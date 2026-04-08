@@ -5,6 +5,6 @@
     "entryFile": "index.ts"
   },
   "allowedNonPeerDependencies": [
-    "@revivejs/loading"
+    "@stackline/loading"
   ]
 }

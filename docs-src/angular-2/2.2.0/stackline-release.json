@@ -1,0 +1,15 @@
+{
+  "packageName": "@stackline/angular-loading",
+  "projectRoot": "angular-loading/angular-loading",
+  "framework": "angular",
+  "family": "angular-2",
+  "major": 2,
+  "exactVersion": "2.2.0",
+  "installMode": "npm-install",
+  "localInstallSource": "../../../dist-lib",
+  "expectedExports": [],
+  "installCommand": "npm install --ignore-scripts",
+  "validateCommand": "npm run validate",
+  "buildCommand": "npm run build",
+  "generatedAt": "2026-04-08T22:20:17.082Z"
+}

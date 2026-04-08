@@ -1,5 +1,5 @@
 {
-  "name": "@revivejs/angular-loading-docs-angular5",
+  "name": "@stackline/angular-loading-docs-angular5",
   "version": "1.0.0",
   "private": true,
   "scripts": {
@@ -14,7 +14,7 @@
     "@angular/forms": "5.2.11",
     "@angular/platform-browser": "5.2.11",
     "@angular/platform-browser-dynamic": "5.2.11",
-    "@revivejs/angular-loading": "5.0.0",
+    "@stackline/angular-loading": "5.0.0",
     "core-js": "2.4.1",
     "rxjs": "5.5.12",
     "zone.js": "0.8.29",

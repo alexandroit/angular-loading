@@ -112,11 +112,11 @@ function createPlaygroundComponentTs(line) {
 
   if (line >= 13) {
     contents = contents
-      .replace("declare var require: any;\n\nvar loadingCore: any = require('@revivejs/loading');\n", "import { loaderVariants } from '@revivejs/loading';\n")
+      .replace("declare var require: any;\n\nvar loadingCore: any = require('@stackline/loading');\n", "import { loaderVariants } from '@stackline/loading';\n")
       .replace('(loadingCore.loaderVariants || [])', '(loaderVariants || [])');
   } else {
     contents = contents.replace(
-      "declare var require: any;\n\nvar loadingCore: any = require('@revivejs/loading');\n",
+      "declare var require: any;\n\nvar loadingCore: any = require('@stackline/loading');\n",
       [
         'var legacyVariantValues: string[] = ' + JSON.stringify(legacyVariantValues) + ';',
         '',
@@ -148,8 +148,8 @@ function createPlaygroundComponentTs(line) {
 
 function createAppComponentHtml() {
   return readAngular2AppFile('app.component.html')
-    .replace('Angular 2.4 · @revivejs/loading 0.1.1', 'Angular {{ releaseLine.angular }} · @revivejs/loading {{ releaseLine.coreVersion }}')
-    .replace('A thin Angular 2 wrapper around the ReviveJS loading toolkit.', 'A maintained Angular wrapper around the ReviveJS loading toolkit.')
+    .replace('Angular 2.4 · @stackline/loading 0.1.1', 'Angular {{ releaseLine.angular }} · @stackline/loading {{ releaseLine.coreVersion }}')
+    .replace('A thin Angular 2 wrapper around the Stackline loading toolkit.', 'A maintained Angular wrapper around the Stackline loading toolkit.')
     .replace('The first Angular line covers the most practical loading patterns for enterprise apps and SaaS screens.', 'This Angular line covers the most practical loading patterns for enterprise apps and SaaS screens.')
     .replace('<div class="preview-frame component-frame"\n                 (create)="onCreate(\'Standalone component\')"\n                 (shown)="onShown(\'Standalone component\')">\n              <revive-loading [visible]="true" [options]="basicOptions"></revive-loading>\n            </div>', '<div class="preview-frame component-frame">\n              <revive-loading\n                [visible]="true"\n                [options]="basicOptions"\n                (create)="onCreate(\'Standalone component\')"\n                (shown)="onShown(\'Standalone component\')"></revive-loading>\n            </div>');
 }
@@ -160,7 +160,7 @@ function createIndexHtml(line) {
     '<html lang="en">',
     '  <head>',
     '    <meta charset="utf-8" />',
-    `    <title>@revivejs/angular-loading · Angular ${line}</title>`,
+    `    <title>@stackline/angular-loading · Angular ${line}</title>`,
     '    <base href="./" />',
     '    <meta name="viewport" content="width=device-width, initial-scale=1" />',
     '  </head>',
@@ -349,8 +349,8 @@ function createAngularJson(line) {
     optionLines[optionLines.length - 1] += ',';
     optionLines.push(
       '            "allowedCommonJsDependencies": [',
-      '              "@revivejs/angular-loading",',
-      '              "@revivejs/loading"',
+      '              "@stackline/angular-loading",',
+      '              "@stackline/loading"',
       '            ]'
     );
   }
@@ -460,14 +460,14 @@ function createPackageJson(line, config) {
     '@angular/forms': `${config.angular}`,
     '@angular/platform-browser': `${config.angular}`,
     '@angular/platform-browser-dynamic': `${config.angular}`,
-    '@revivejs/angular-loading': `${line}.0.0`,
+    '@stackline/angular-loading': `${line}.0.0`,
     'core-js': `${config.coreJs}`,
     rxjs: `${config.rxjs}`,
     'zone.js': `${config.zone}`
   };
 
   if (line >= 13) {
-    dependencies['@revivejs/loading'] = rootPackage.dependencies['@revivejs/loading'];
+    dependencies['@stackline/loading'] = rootPackage.dependencies['@stackline/loading'];
   }
 
   if (line <= 7) {
@@ -499,7 +499,7 @@ function createPackageJson(line, config) {
       : `ng build --output-path ../../docs/angular-${line} --base-href ./ --build-optimizer=false --vendor-chunk=true --named-chunks=true --aot=false`;
 
   return JSON.stringify({
-    name: `@revivejs/angular-loading-docs-angular${line}`,
+    name: `@stackline/angular-loading-docs-angular${line}`,
     version: '1.0.0',
     private: true,
     scripts: {
@@ -519,7 +519,7 @@ function createReleaseLine(line, config) {
     'export const RELEASE_LINE = {',
     `  angular: '${angularParts[0]}.${angularParts[1]}.x',`,
     `  packageVersion: '${line}.0.0',`,
-    `  coreVersion: '${String(rootPackage.dependencies['@revivejs/loading']).replace(/^[^0-9]*/, '')}',`,
+    `  coreVersion: '${String(rootPackage.dependencies['@stackline/loading']).replace(/^[^0-9]*/, '')}',`,
     `  runtimeTarget: 'Angular ${line} + Angular CLI',`,
     `  docsPath: '/angular-${line}/'`,
     '};',

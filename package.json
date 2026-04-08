@@ -1,7 +1,7 @@
 {
-  "name": "@revivejs/angular-loading",
+  "name": "@stackline/angular-loading",
   "version": "21.0.1",
-  "description": "Maintained Angular wrapper components, directives, and service helpers for @revivejs/loading.",
+  "description": "Maintained Angular wrapper components, directives, and service helpers for @stackline/loading.",
   "main": "./dist/fesm2022/revivejs-angular-loading.mjs",
   "module": "./dist/fesm2022/revivejs-angular-loading.mjs",
   "types": "./dist/types/revivejs-angular-loading.d.ts",
@@ -90,12 +90,12 @@
   },
   "homepage": "https://alexandroit.github.io/angular-loading/",
   "peerDependencies": {
-    "@angular/common": ">=4.0.0 <22.0.0",
-    "@angular/core": ">=4.0.0 <22.0.0",
-    "@angular/platform-browser": ">=4.0.0 <22.0.0"
+    "@angular/common": ">=21.0.0 <22.0.0",
+    "@angular/core": ">=21.0.0 <22.0.0",
+    "@angular/platform-browser": ">=21.0.0 <22.0.0"
   },
   "dependencies": {
-    "@revivejs/loading": "^0.1.1"
+    "@stackline/loading": "^0.1.1"
   },
   "devDependencies": {
     "@angular/common": "^21.2.7",
