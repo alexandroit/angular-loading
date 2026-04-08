@@ -1,6 +1,6 @@
 webpackJsonp(["vendor"],{
 
-/***/ "../../../../@revivejs/angular-loading/index.js":
+/***/ "../../../../@stackline/angular-loading/index.js":
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -20,12 +20,12 @@ var __exportStar = (this && this.__exportStar) || function(m, exports) {
     for (var p in m) if (p !== "default" && !Object.prototype.hasOwnProperty.call(exports, p)) __createBinding(exports, m, p);
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-__exportStar(__webpack_require__("../../../../@revivejs/angular-loading/src/public_api.js"), exports);
+__exportStar(__webpack_require__("../../../../@stackline/angular-loading/src/public_api.js"), exports);
 //# sourceMappingURL=index.js.map
 
 /***/ }),
 
-/***/ "../../../../@revivejs/angular-loading/src/LoadingComponent.js":
+/***/ "../../../../@stackline/angular-loading/src/LoadingComponent.js":
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -42,7 +42,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.LoadingComponent = void 0;
 var core_1 = __webpack_require__("../../../core/@angular/core.es5.js");
-var LoadingController_1 = __webpack_require__("../../../../@revivejs/angular-loading/src/LoadingController.js");
+var LoadingController_1 = __webpack_require__("../../../../@stackline/angular-loading/src/LoadingController.js");
 var LoadingComponent = /** @class */ (function () {
     function LoadingComponent() {
         var _this = this;
@@ -176,14 +176,14 @@ exports.LoadingComponent = LoadingComponent;
 
 /***/ }),
 
-/***/ "../../../../@revivejs/angular-loading/src/LoadingController.js":
+/***/ "../../../../@stackline/angular-loading/src/LoadingController.js":
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.LoadingController = void 0;
-var loading_1 = __webpack_require__("../../../../@revivejs/angular-loading/vendor/loading.js");
+var loading_1 = __webpack_require__("../../../../@stackline/angular-loading/vendor/loading.js");
 var LoadingController = /** @class */ (function () {
     function LoadingController(host, hooks) {
         this.host = host;
@@ -283,7 +283,7 @@ exports.LoadingController = LoadingController;
 
 /***/ }),
 
-/***/ "../../../../@revivejs/angular-loading/src/LoadingDirective.js":
+/***/ "../../../../@stackline/angular-loading/src/LoadingDirective.js":
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -300,7 +300,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.LoadingDirective = void 0;
 var core_1 = __webpack_require__("../../../core/@angular/core.es5.js");
-var LoadingController_1 = __webpack_require__("../../../../@revivejs/angular-loading/src/LoadingController.js");
+var LoadingController_1 = __webpack_require__("../../../../@stackline/angular-loading/src/LoadingController.js");
 var LoadingDirective = /** @class */ (function () {
     function LoadingDirective() {
         var _this = this;
@@ -418,7 +418,7 @@ exports.LoadingDirective = LoadingDirective;
 
 /***/ }),
 
-/***/ "../../../../@revivejs/angular-loading/src/LoadingService.js":
+/***/ "../../../../@stackline/angular-loading/src/LoadingService.js":
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -432,7 +432,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.LoadingService = void 0;
 var core_1 = __webpack_require__("../../../core/@angular/core.es5.js");
-var loading_1 = __webpack_require__("../../../../@revivejs/angular-loading/vendor/loading.js");
+var loading_1 = __webpack_require__("../../../../@stackline/angular-loading/vendor/loading.js");
 var LoadingService = /** @class */ (function () {
     function LoadingService() {
     }
@@ -466,7 +466,7 @@ exports.LoadingService = LoadingService;
 
 /***/ }),
 
-/***/ "../../../../@revivejs/angular-loading/src/public_api.js":
+/***/ "../../../../@stackline/angular-loading/src/public_api.js":
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -480,11 +480,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.LoadingService = exports.LoadingDirective = exports.LoadingComponent = exports.LoadingModule = void 0;
 var core_1 = __webpack_require__("../../../core/@angular/core.es5.js");
-var LoadingComponent_1 = __webpack_require__("../../../../@revivejs/angular-loading/src/LoadingComponent.js");
+var LoadingComponent_1 = __webpack_require__("../../../../@stackline/angular-loading/src/LoadingComponent.js");
 Object.defineProperty(exports, "LoadingComponent", { enumerable: true, get: function () { return LoadingComponent_1.LoadingComponent; } });
-var LoadingDirective_1 = __webpack_require__("../../../../@revivejs/angular-loading/src/LoadingDirective.js");
+var LoadingDirective_1 = __webpack_require__("../../../../@stackline/angular-loading/src/LoadingDirective.js");
 Object.defineProperty(exports, "LoadingDirective", { enumerable: true, get: function () { return LoadingDirective_1.LoadingDirective; } });
-var LoadingService_1 = __webpack_require__("../../../../@revivejs/angular-loading/src/LoadingService.js");
+var LoadingService_1 = __webpack_require__("../../../../@stackline/angular-loading/src/LoadingService.js");
 Object.defineProperty(exports, "LoadingService", { enumerable: true, get: function () { return LoadingService_1.LoadingService; } });
 var LOADING_DECLARATIONS = [
     LoadingComponent_1.LoadingComponent,
@@ -514,7 +514,7 @@ exports.LoadingModule = LoadingModule;
 
 /***/ }),
 
-/***/ "../../../../@revivejs/angular-loading/vendor/loading.js":
+/***/ "../../../../@stackline/angular-loading/vendor/loading.js":
 /***/ (function(module, exports) {
 
 var __defProp = Object.defineProperty;
@@ -572,7 +572,7 @@ var __async = (__this, __arguments, generator) => {
   });
 };
 
-// node_modules/@revivejs/loading/dist/index.js
+// node_modules/@stackline/loading/dist/index.js
 var index_exports = {};
 __export(index_exports, {
   applyThemeTokens: () => applyThemeTokens,
@@ -2621,7 +2621,7 @@ function resolveTarget(target, doc = document) {
   if (typeof target === "string") {
     const found = doc.querySelector(target);
     if (!found) {
-      throw new Error(`@revivejs/loading could not find target "${target}".`);
+      throw new Error(`@stackline/loading could not find target "${target}".`);
     }
     return found;
   }
@@ -2676,7 +2676,7 @@ var DOMLoader = class {
     __publicField(this, "hideResolver", null);
     __publicField(this, "shownAt", 0);
     if (!canUseDOM()) {
-      throw new Error("@revivejs/loading requires a browser-like DOM to create loaders.");
+      throw new Error("@stackline/loading requires a browser-like DOM to create loaders.");
     }
     this.options = normalizeLoaderOptions(options);
     ensureLoaderStyles(this.options.variant);
@@ -2904,7 +2904,7 @@ var DOMLoader = class {
   }
   assertAlive() {
     if (this.state.destroyed) {
-      throw new Error("@revivejs/loading cannot operate on a destroyed loader.");
+      throw new Error("@stackline/loading cannot operate on a destroyed loader.");
     }
   }
 };

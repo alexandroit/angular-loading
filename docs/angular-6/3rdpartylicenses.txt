@@ -91,7 +91,7 @@ MIT
 MIT
 MIT
 
-@revivejs/angular-loading@6.0.0
+@stackline/angular-loading@6.0.0
 MIT
 MIT License
 

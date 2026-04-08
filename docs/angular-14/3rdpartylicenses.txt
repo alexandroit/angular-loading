@@ -16,7 +16,7 @@ MIT
 @angular/platform-browser-dynamic
 MIT
 
-@revivejs/angular-loading
+@stackline/angular-loading
 MIT
 MIT License
 
@@ -41,7 +41,7 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
 
-@revivejs/loading
+@stackline/loading
 MIT
 MIT License
 

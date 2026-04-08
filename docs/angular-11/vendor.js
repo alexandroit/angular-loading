@@ -42170,7 +42170,7 @@ function publish(selector) {
 
 /***/ "NrSb":
 /*!*************************************************************************!*\
-  !*** ./node_modules/@revivejs/angular-loading/src/LoadingController.js ***!
+  !*** ./node_modules/@stackline/angular-loading/src/LoadingController.js ***!
   \*************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
@@ -43128,7 +43128,7 @@ function dispatchError(state) {
 
 /***/ "RQOp":
 /*!*********************************************************!*\
-  !*** ./node_modules/@revivejs/angular-loading/index.js ***!
+  !*** ./node_modules/@stackline/angular-loading/index.js ***!
   \*********************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
@@ -45182,7 +45182,7 @@ function switchMapTo(innerObservable, resultSelector) {
 
 /***/ "aqVN":
 /*!******************************************************************!*\
-  !*** ./node_modules/@revivejs/angular-loading/vendor/loading.js ***!
+  !*** ./node_modules/@stackline/angular-loading/vendor/loading.js ***!
   \******************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
@@ -45242,7 +45242,7 @@ var __async = (__this, __arguments, generator) => {
   });
 };
 
-// node_modules/@revivejs/loading/dist/index.js
+// node_modules/@stackline/loading/dist/index.js
 var index_exports = {};
 __export(index_exports, {
   applyThemeTokens: () => applyThemeTokens,
@@ -47291,7 +47291,7 @@ function resolveTarget(target, doc = document) {
   if (typeof target === "string") {
     const found = doc.querySelector(target);
     if (!found) {
-      throw new Error(`@revivejs/loading could not find target "${target}".`);
+      throw new Error(`@stackline/loading could not find target "${target}".`);
     }
     return found;
   }
@@ -47346,7 +47346,7 @@ var DOMLoader = class {
     __publicField(this, "hideResolver", null);
     __publicField(this, "shownAt", 0);
     if (!canUseDOM()) {
-      throw new Error("@revivejs/loading requires a browser-like DOM to create loaders.");
+      throw new Error("@stackline/loading requires a browser-like DOM to create loaders.");
     }
     this.options = normalizeLoaderOptions(options);
     ensureLoaderStyles(this.options.variant);
@@ -47574,7 +47574,7 @@ var DOMLoader = class {
   }
   assertAlive() {
     if (this.state.destroyed) {
-      throw new Error("@revivejs/loading cannot operate on a destroyed loader.");
+      throw new Error("@stackline/loading cannot operate on a destroyed loader.");
     }
   }
 };
@@ -47992,7 +47992,7 @@ class FindValueSubscriber extends _Subscriber__WEBPACK_IMPORTED_MODULE_0__["Subs
 
 /***/ "cZxe":
 /*!**********************************************************************!*\
-  !*** ./node_modules/@revivejs/angular-loading/src/LoadingService.js ***!
+  !*** ./node_modules/@stackline/angular-loading/src/LoadingService.js ***!
   \**********************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
@@ -82435,7 +82435,7 @@ function scheduleArray(input, scheduler) {
 
 /***/ "jedL":
 /*!************************************************************************!*\
-  !*** ./node_modules/@revivejs/angular-loading/src/LoadingComponent.js ***!
+  !*** ./node_modules/@stackline/angular-loading/src/LoadingComponent.js ***!
   \************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
@@ -85522,7 +85522,7 @@ class DeMaterializeSubscriber extends _Subscriber__WEBPACK_IMPORTED_MODULE_0__["
 
 /***/ "kulZ":
 /*!************************************************************************!*\
-  !*** ./node_modules/@revivejs/angular-loading/src/LoadingDirective.js ***!
+  !*** ./node_modules/@stackline/angular-loading/src/LoadingDirective.js ***!
   \************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
@@ -93608,7 +93608,7 @@ function max(comparer) {
 
 /***/ "ytla":
 /*!******************************************************************!*\
-  !*** ./node_modules/@revivejs/angular-loading/src/public_api.js ***!
+  !*** ./node_modules/@stackline/angular-loading/src/public_api.js ***!
   \******************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {

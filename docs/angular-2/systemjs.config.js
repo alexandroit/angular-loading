@@ -31,8 +31,8 @@
       rxjs: 'npm:rxjs@5.5.12',
       ts: 'npm:plugin-typescript@5.3.3/lib/plugin.js',
       typescript: 'npm:typescript@2.4.2/lib/typescript.js',
-      '@revivejs/angular-loading': 'vendor/angular-loading',
-      '@revivejs/loading': 'vendor/loading'
+      '@stackline/angular-loading': 'vendor/angular-loading',
+      '@stackline/loading': 'vendor/loading'
     },
     packages: {
       app: {
@@ -42,11 +42,11 @@
       rxjs: {
         defaultExtension: 'js'
       },
-      '@revivejs/angular-loading': {
+      '@stackline/angular-loading': {
         main: './index.js',
         defaultExtension: 'js'
       },
-      '@revivejs/loading': {
+      '@stackline/loading': {
         main: './index.js',
         defaultExtension: 'js'
       }

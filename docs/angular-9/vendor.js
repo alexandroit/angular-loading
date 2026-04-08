@@ -91895,9 +91895,9 @@ const VERSION = new _angular_core__WEBPACK_IMPORTED_MODULE_1__["Version"]('9.1.1
 
 /***/ }),
 
-/***/ "./node_modules/@revivejs/angular-loading/index.js":
+/***/ "./node_modules/@stackline/angular-loading/index.js":
 /*!*********************************************************!*\
-  !*** ./node_modules/@revivejs/angular-loading/index.js ***!
+  !*** ./node_modules/@stackline/angular-loading/index.js ***!
   \*********************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
@@ -91919,14 +91919,14 @@ var __exportStar = (this && this.__exportStar) || function(m, exports) {
     for (var p in m) if (p !== "default" && !Object.prototype.hasOwnProperty.call(exports, p)) __createBinding(exports, m, p);
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-__exportStar(__webpack_require__(/*! ./src/public_api */ "./node_modules/@revivejs/angular-loading/src/public_api.js"), exports);
+__exportStar(__webpack_require__(/*! ./src/public_api */ "./node_modules/@stackline/angular-loading/src/public_api.js"), exports);
 //# sourceMappingURL=index.js.map
 
 /***/ }),
 
-/***/ "./node_modules/@revivejs/angular-loading/src/LoadingComponent.js":
+/***/ "./node_modules/@stackline/angular-loading/src/LoadingComponent.js":
 /*!************************************************************************!*\
-  !*** ./node_modules/@revivejs/angular-loading/src/LoadingComponent.js ***!
+  !*** ./node_modules/@stackline/angular-loading/src/LoadingComponent.js ***!
   \************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
@@ -91945,7 +91945,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.LoadingComponent = void 0;
 var core_1 = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
-var LoadingController_1 = __webpack_require__(/*! ./LoadingController */ "./node_modules/@revivejs/angular-loading/src/LoadingController.js");
+var LoadingController_1 = __webpack_require__(/*! ./LoadingController */ "./node_modules/@stackline/angular-loading/src/LoadingController.js");
 var LoadingComponent = /** @class */ (function () {
     function LoadingComponent() {
         var _this = this;
@@ -92079,9 +92079,9 @@ exports.LoadingComponent = LoadingComponent;
 
 /***/ }),
 
-/***/ "./node_modules/@revivejs/angular-loading/src/LoadingController.js":
+/***/ "./node_modules/@stackline/angular-loading/src/LoadingController.js":
 /*!*************************************************************************!*\
-  !*** ./node_modules/@revivejs/angular-loading/src/LoadingController.js ***!
+  !*** ./node_modules/@stackline/angular-loading/src/LoadingController.js ***!
   \*************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
@@ -92090,7 +92090,7 @@ exports.LoadingComponent = LoadingComponent;
 
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.LoadingController = void 0;
-var loading_1 = __webpack_require__(/*! ../vendor/loading.js */ "./node_modules/@revivejs/angular-loading/vendor/loading.js");
+var loading_1 = __webpack_require__(/*! ../vendor/loading.js */ "./node_modules/@stackline/angular-loading/vendor/loading.js");
 var LoadingController = /** @class */ (function () {
     function LoadingController(host, hooks) {
         this.host = host;
@@ -92190,9 +92190,9 @@ exports.LoadingController = LoadingController;
 
 /***/ }),
 
-/***/ "./node_modules/@revivejs/angular-loading/src/LoadingDirective.js":
+/***/ "./node_modules/@stackline/angular-loading/src/LoadingDirective.js":
 /*!************************************************************************!*\
-  !*** ./node_modules/@revivejs/angular-loading/src/LoadingDirective.js ***!
+  !*** ./node_modules/@stackline/angular-loading/src/LoadingDirective.js ***!
   \************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
@@ -92211,7 +92211,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.LoadingDirective = void 0;
 var core_1 = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
-var LoadingController_1 = __webpack_require__(/*! ./LoadingController */ "./node_modules/@revivejs/angular-loading/src/LoadingController.js");
+var LoadingController_1 = __webpack_require__(/*! ./LoadingController */ "./node_modules/@stackline/angular-loading/src/LoadingController.js");
 var LoadingDirective = /** @class */ (function () {
     function LoadingDirective() {
         var _this = this;
@@ -92329,9 +92329,9 @@ exports.LoadingDirective = LoadingDirective;
 
 /***/ }),
 
-/***/ "./node_modules/@revivejs/angular-loading/src/LoadingService.js":
+/***/ "./node_modules/@stackline/angular-loading/src/LoadingService.js":
 /*!**********************************************************************!*\
-  !*** ./node_modules/@revivejs/angular-loading/src/LoadingService.js ***!
+  !*** ./node_modules/@stackline/angular-loading/src/LoadingService.js ***!
   \**********************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
@@ -92347,7 +92347,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.LoadingService = void 0;
 var core_1 = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
-var loading_1 = __webpack_require__(/*! ../vendor/loading.js */ "./node_modules/@revivejs/angular-loading/vendor/loading.js");
+var loading_1 = __webpack_require__(/*! ../vendor/loading.js */ "./node_modules/@stackline/angular-loading/vendor/loading.js");
 var LoadingService = /** @class */ (function () {
     function LoadingService() {
     }
@@ -92381,9 +92381,9 @@ exports.LoadingService = LoadingService;
 
 /***/ }),
 
-/***/ "./node_modules/@revivejs/angular-loading/src/public_api.js":
+/***/ "./node_modules/@stackline/angular-loading/src/public_api.js":
 /*!******************************************************************!*\
-  !*** ./node_modules/@revivejs/angular-loading/src/public_api.js ***!
+  !*** ./node_modules/@stackline/angular-loading/src/public_api.js ***!
   \******************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
@@ -92399,11 +92399,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.LoadingService = exports.LoadingDirective = exports.LoadingComponent = exports.LoadingModule = void 0;
 var core_1 = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
-var LoadingComponent_1 = __webpack_require__(/*! ./LoadingComponent */ "./node_modules/@revivejs/angular-loading/src/LoadingComponent.js");
+var LoadingComponent_1 = __webpack_require__(/*! ./LoadingComponent */ "./node_modules/@stackline/angular-loading/src/LoadingComponent.js");
 Object.defineProperty(exports, "LoadingComponent", { enumerable: true, get: function () { return LoadingComponent_1.LoadingComponent; } });
-var LoadingDirective_1 = __webpack_require__(/*! ./LoadingDirective */ "./node_modules/@revivejs/angular-loading/src/LoadingDirective.js");
+var LoadingDirective_1 = __webpack_require__(/*! ./LoadingDirective */ "./node_modules/@stackline/angular-loading/src/LoadingDirective.js");
 Object.defineProperty(exports, "LoadingDirective", { enumerable: true, get: function () { return LoadingDirective_1.LoadingDirective; } });
-var LoadingService_1 = __webpack_require__(/*! ./LoadingService */ "./node_modules/@revivejs/angular-loading/src/LoadingService.js");
+var LoadingService_1 = __webpack_require__(/*! ./LoadingService */ "./node_modules/@stackline/angular-loading/src/LoadingService.js");
 Object.defineProperty(exports, "LoadingService", { enumerable: true, get: function () { return LoadingService_1.LoadingService; } });
 var LOADING_DECLARATIONS = [
     LoadingComponent_1.LoadingComponent,
@@ -92433,9 +92433,9 @@ exports.LoadingModule = LoadingModule;
 
 /***/ }),
 
-/***/ "./node_modules/@revivejs/angular-loading/vendor/loading.js":
+/***/ "./node_modules/@stackline/angular-loading/vendor/loading.js":
 /*!******************************************************************!*\
-  !*** ./node_modules/@revivejs/angular-loading/vendor/loading.js ***!
+  !*** ./node_modules/@stackline/angular-loading/vendor/loading.js ***!
   \******************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
@@ -92495,7 +92495,7 @@ var __async = (__this, __arguments, generator) => {
   });
 };
 
-// node_modules/@revivejs/loading/dist/index.js
+// node_modules/@stackline/loading/dist/index.js
 var index_exports = {};
 __export(index_exports, {
   applyThemeTokens: () => applyThemeTokens,
@@ -94544,7 +94544,7 @@ function resolveTarget(target, doc = document) {
   if (typeof target === "string") {
     const found = doc.querySelector(target);
     if (!found) {
-      throw new Error(`@revivejs/loading could not find target "${target}".`);
+      throw new Error(`@stackline/loading could not find target "${target}".`);
     }
     return found;
   }
@@ -94599,7 +94599,7 @@ var DOMLoader = class {
     __publicField(this, "hideResolver", null);
     __publicField(this, "shownAt", 0);
     if (!canUseDOM()) {
-      throw new Error("@revivejs/loading requires a browser-like DOM to create loaders.");
+      throw new Error("@stackline/loading requires a browser-like DOM to create loaders.");
     }
     this.options = normalizeLoaderOptions(options);
     ensureLoaderStyles(this.options.variant);
@@ -94827,7 +94827,7 @@ var DOMLoader = class {
   }
   assertAlive() {
     if (this.state.destroyed) {
-      throw new Error("@revivejs/loading cannot operate on a destroyed loader.");
+      throw new Error("@stackline/loading cannot operate on a destroyed loader.");
     }
   }
 };

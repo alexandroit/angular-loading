@@ -41,7 +41,7 @@ MIT
 @angular/platform-browser-dynamic
 MIT
 
-@revivejs/angular-loading
+@stackline/angular-loading
 MIT
 MIT License
 

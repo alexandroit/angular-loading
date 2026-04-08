@@ -8,7 +8,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.LoadingService = void 0;
 var core_1 = require("@angular/core");
-var loading_1 = require("@revivejs/loading");
+var loading_1 = require("@stackline/loading");
 var LoadingService = /** @class */ (function () {
     function LoadingService() {
     }

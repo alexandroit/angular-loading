@@ -2049,7 +2049,7 @@ function resolveTarget(target, doc = document) {
   if (typeof target === "string") {
     const found = doc.querySelector(target);
     if (!found) {
-      throw new Error(`@revivejs/loading could not find target "${target}".`);
+      throw new Error(`@stackline/loading could not find target "${target}".`);
     }
     return found;
   }
@@ -2108,7 +2108,7 @@ var DOMLoader = class {
     __publicField(this, "hideResolver", null);
     __publicField(this, "shownAt", 0);
     if (!canUseDOM()) {
-      throw new Error("@revivejs/loading requires a browser-like DOM to create loaders.");
+      throw new Error("@stackline/loading requires a browser-like DOM to create loaders.");
     }
     this.options = normalizeLoaderOptions(options);
     ensureLoaderStyles(this.options.variant);
@@ -2338,7 +2338,7 @@ var DOMLoader = class {
   }
   assertAlive() {
     if (this.state.destroyed) {
-      throw new Error("@revivejs/loading cannot operate on a destroyed loader.");
+      throw new Error("@stackline/loading cannot operate on a destroyed loader.");
     }
   }
 };
