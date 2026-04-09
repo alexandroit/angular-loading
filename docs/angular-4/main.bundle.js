@@ -48,8 +48,8 @@ module.exports = "<div class=\"shell\">\n  <section class=\"hero\">\n    <div cl
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppComponent; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__revivejs_angular_loading__ = __webpack_require__("../../../../@stackline/angular-loading/index.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__revivejs_angular_loading___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__revivejs_angular_loading__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__stackline_angular_loading__ = __webpack_require__("../../../../@stackline/angular-loading/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__stackline_angular_loading___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__stackline_angular_loading__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__data_api__ = __webpack_require__("../../../../../src/app/data/api.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__data_release_line__ = __webpack_require__("../../../../../src/app/data/release-line.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -245,11 +245,10 @@ AppComponent = __decorate([
         template: __webpack_require__("../../../../../src/app/app.component.html"),
         styles: [__webpack_require__("../../../../../src/app/app.component.css")]
     }),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__revivejs_angular_loading__["LoadingService"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__revivejs_angular_loading__["LoadingService"]) === "function" && _a || Object])
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__stackline_angular_loading__["LoadingService"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__stackline_angular_loading__["LoadingService"]) === "function" && _a || Object])
 ], AppComponent);
 
 var _a;
-//# sourceMappingURL=app.component.js.map
 
 /***/ }),
 
@@ -261,8 +260,8 @@ var _a;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__ = __webpack_require__("../../../platform-browser/@angular/platform-browser.es5.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_forms__ = __webpack_require__("../../../forms/@angular/forms.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__revivejs_angular_loading__ = __webpack_require__("../../../../@stackline/angular-loading/index.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__revivejs_angular_loading___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3__revivejs_angular_loading__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__stackline_angular_loading__ = __webpack_require__("../../../../@stackline/angular-loading/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__stackline_angular_loading___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3__stackline_angular_loading__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__app_component__ = __webpack_require__("../../../../../src/app/app.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__playground_component__ = __webpack_require__("../../../../../src/app/playground.component.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -288,13 +287,12 @@ AppModule = __decorate([
         imports: [
             __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */],
             __WEBPACK_IMPORTED_MODULE_2__angular_forms__["a" /* FormsModule */],
-            __WEBPACK_IMPORTED_MODULE_3__revivejs_angular_loading__["LoadingModule"].forRoot()
+            __WEBPACK_IMPORTED_MODULE_3__stackline_angular_loading__["LoadingModule"].forRoot()
         ],
         bootstrap: [__WEBPACK_IMPORTED_MODULE_4__app_component__["a" /* AppComponent */]]
     })
 ], AppModule);
 
-//# sourceMappingURL=app.module.js.map
 
 /***/ }),
 
@@ -317,7 +315,6 @@ var API_CARDS = [
         summary: 'Create and control fullscreen or ad-hoc loaders programmatically from your Angular services or components.'
     }
 ];
-//# sourceMappingURL=api.js.map
 
 /***/ }),
 
@@ -333,7 +330,6 @@ var RELEASE_LINE = {
     runtimeTarget: 'Angular 4 + Angular CLI',
     docsPath: '/angular-4/'
 };
-//# sourceMappingURL=release-line.js.map
 
 /***/ }),
 
@@ -731,7 +727,6 @@ PlaygroundComponent = __decorate([
     __metadata("design:paramtypes", [])
 ], PlaygroundComponent);
 
-//# sourceMappingURL=playground.component.js.map
 
 /***/ }),
 
@@ -743,7 +738,6 @@ PlaygroundComponent = __decorate([
 var environment = {
     production: false
 };
-//# sourceMappingURL=environment.js.map
 
 /***/ }),
 
@@ -776,7 +770,6 @@ Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* pl
     ].filter(Boolean).join('\n');
     document.body.innerHTML = '<pre style="padding:16px;white-space:pre-wrap;">' + details.replace(/</g, '&lt;') + '</pre>';
 });
-//# sourceMappingURL=main.js.map
 
 /***/ }),
 
@@ -789,4 +782,3 @@ module.exports = __webpack_require__("../../../../../src/main.ts");
 /***/ })
 
 },[0]);
-//# sourceMappingURL=main.bundle.js.map

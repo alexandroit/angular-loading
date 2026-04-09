@@ -73,8 +73,8 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AppComponent", function() { return AppComponent; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
-/* harmony import */ var _revivejs_angular_loading__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @stackline/angular-loading */ "./node_modules/@stackline/angular-loading/index.js");
-/* harmony import */ var _revivejs_angular_loading__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_revivejs_angular_loading__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _stackline_angular_loading__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @stackline/angular-loading */ "./node_modules/@stackline/angular-loading/index.js");
+/* harmony import */ var _stackline_angular_loading__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_stackline_angular_loading__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _data_api__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./data/api */ "./src/app/data/api.ts");
 /* harmony import */ var _data_release_line__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./data/release-line */ "./src/app/data/release-line.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
@@ -263,7 +263,7 @@ let AppComponent = class AppComponent {
     }
 };
 AppComponent.ctorParameters = () => [
-    { type: _revivejs_angular_loading__WEBPACK_IMPORTED_MODULE_1__["LoadingService"] }
+    { type: _stackline_angular_loading__WEBPACK_IMPORTED_MODULE_1__["LoadingService"] }
 ];
 AppComponent = __decorate([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
@@ -271,7 +271,7 @@ AppComponent = __decorate([
         template: __importDefault(__webpack_require__(/*! raw-loader!./app.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/app.component.html")).default,
         styles: [__importDefault(__webpack_require__(/*! ./app.component.css */ "./src/app/app.component.css")).default]
     }),
-    __metadata("design:paramtypes", [_revivejs_angular_loading__WEBPACK_IMPORTED_MODULE_1__["LoadingService"]])
+    __metadata("design:paramtypes", [_stackline_angular_loading__WEBPACK_IMPORTED_MODULE_1__["LoadingService"]])
 ], AppComponent);
 
 
@@ -291,8 +291,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/platform-browser */ "./node_modules/@angular/platform-browser/__ivy_ngcc__/fesm2015/platform-browser.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
 /* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/__ivy_ngcc__/fesm2015/forms.js");
-/* harmony import */ var _revivejs_angular_loading__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @stackline/angular-loading */ "./node_modules/@stackline/angular-loading/index.js");
-/* harmony import */ var _revivejs_angular_loading__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_revivejs_angular_loading__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _stackline_angular_loading__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @stackline/angular-loading */ "./node_modules/@stackline/angular-loading/index.js");
+/* harmony import */ var _stackline_angular_loading__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_stackline_angular_loading__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./app.component */ "./src/app/app.component.ts");
 /* harmony import */ var _playground_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./playground.component */ "./src/app/playground.component.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
@@ -315,7 +315,7 @@ AppModule = __decorate([
         imports: [
             _angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["BrowserModule"],
             _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormsModule"],
-            _revivejs_angular_loading__WEBPACK_IMPORTED_MODULE_3__["LoadingModule"].forRoot()
+            _stackline_angular_loading__WEBPACK_IMPORTED_MODULE_3__["LoadingModule"].forRoot()
         ],
         bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_4__["AppComponent"]]
     })
@@ -826,10 +826,9 @@ Object(_angular_platform_browser_dynamic__WEBPACK_IMPORTED_MODULE_0__["platformB
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /tmp/revivejs-angular-loading-docs-9-r3HP3Y/src/main.ts */"./src/main.ts");
+module.exports = __webpack_require__(/*! /tmp/stackline-angular-loading-docs-9-r3HP3Y/src/main.ts */"./src/main.ts");
 
 
 /***/ })
 
 },[[0,"runtime","vendor"]]]);
-//# sourceMappingURL=main.js.map

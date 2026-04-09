@@ -73,7 +73,7 @@ function replaceBuildOutputPath(script, line) {
 
 function createLegacyPackage(line) {
   const version = `${line}.0.0`;
-  const tempDir = fs.mkdtempSync(path.join(os.tmpdir(), `revivejs-angular-loading-${version}-`));
+  const tempDir = fs.mkdtempSync(path.join(os.tmpdir(), `stackline-angular-loading-${version}-`));
   const distLegacyDir = path.join(rootDir, 'dist-legacy');
   const coreEntry = path.join(rootDir, 'node_modules', '@stackline', 'loading', 'dist', 'index.js');
   const vendorDir = path.join(tempDir, 'vendor');
@@ -153,13 +153,13 @@ function createLegacyPackage(line) {
   return {
     version,
     tempDir,
-    tarballPath: path.join(tempDir, `revivejs-angular-loading-${version}.tgz`)
+    tarballPath: path.join(tempDir, `stackline-angular-loading-${version}.tgz`)
   };
 }
 
 function createModernPackage() {
   const rootPackage = readJson(path.join(rootDir, 'package.json'));
-  const tempDir = fs.mkdtempSync(path.join(os.tmpdir(), 'revivejs-angular-loading-21.0.0-'));
+  const tempDir = fs.mkdtempSync(path.join(os.tmpdir(), 'stackline-angular-loading-21.0.0-'));
 
   copyDir(path.join(rootDir, 'dist'), path.join(tempDir, 'dist'));
   fs.copyFileSync(path.join(rootDir, 'README.md'), path.join(tempDir, 'README.md'));
@@ -171,13 +171,13 @@ function createModernPackage() {
   return {
     version: rootPackage.version,
     tempDir,
-    tarballPath: path.join(tempDir, `revivejs-angular-loading-${rootPackage.version}.tgz`)
+    tarballPath: path.join(tempDir, `stackline-angular-loading-${rootPackage.version}.tgz`)
   };
 }
 
 function validateDocsLine(line, tarballPath) {
   const docsSourceDir = path.join(rootDir, 'docs-src', `angular-${line}`);
-  const tempDocsDir = fs.mkdtempSync(path.join(os.tmpdir(), `revivejs-angular-loading-docs-${line}-`));
+  const tempDocsDir = fs.mkdtempSync(path.join(os.tmpdir(), `stackline-angular-loading-docs-${line}-`));
   const tempBuildDir = path.join(tempDocsDir, 'dist-docs');
   const packageJsonPath = path.join(tempDocsDir, 'package.json');
   const docsPackageJson = readJson(path.join(docsSourceDir, 'package.json'));

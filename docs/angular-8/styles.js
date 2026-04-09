@@ -338,10 +338,9 @@ if (content.locals) {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /tmp/revivejs-angular-loading-docs-8-iGIWTt/src/styles.css */"./src/styles.css");
+module.exports = __webpack_require__(/*! /tmp/stackline-angular-loading-docs-8-iGIWTt/src/styles.css */"./src/styles.css");
 
 
 /***/ })
 
 },[[2,"runtime"]]]);
-//# sourceMappingURL=styles.js.map

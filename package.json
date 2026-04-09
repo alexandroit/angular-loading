@@ -1,15 +1,15 @@
 {
   "name": "@stackline/angular-loading",
-  "version": "21.0.1",
+  "version": "21.0.0",
   "description": "Maintained Angular wrapper components, directives, and service helpers for @stackline/loading.",
-  "main": "./dist/fesm2022/revivejs-angular-loading.mjs",
-  "module": "./dist/fesm2022/revivejs-angular-loading.mjs",
-  "types": "./dist/types/revivejs-angular-loading.d.ts",
+  "main": "./dist/fesm2022/stackline-angular-loading.mjs",
+  "module": "./dist/fesm2022/stackline-angular-loading.mjs",
+  "types": "./dist/types/stackline-angular-loading.d.ts",
   "sideEffects": false,
   "exports": {
     ".": {
-      "types": "./dist/types/revivejs-angular-loading.d.ts",
-      "default": "./dist/fesm2022/revivejs-angular-loading.mjs"
+      "types": "./dist/types/stackline-angular-loading.d.ts",
+      "default": "./dist/fesm2022/stackline-angular-loading.mjs"
     }
   },
   "files": [
@@ -80,8 +80,7 @@
     "progress-ui",
     "accessibility",
     "typescript",
-    "ui-library",
-    "revivejs"
+    "ui-library"
   ],
   "author": "Alexandro Marques",
   "license": "MIT",

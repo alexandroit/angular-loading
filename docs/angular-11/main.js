@@ -7,7 +7,7 @@
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /tmp/revivejs-angular-loading-docs-11-FpKq3H/src/main.ts */"zUnb");
+module.exports = __webpack_require__(/*! /tmp/stackline-angular-loading-docs-11-FpKq3H/src/main.ts */"zUnb");
 
 
 /***/ }),
@@ -102,8 +102,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _raw_loader_app_component_html__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! raw-loader!./app.component.html */ "VzVu");
 /* harmony import */ var _app_component_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./app.component.css */ "A3xY");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/core */ "fXoL");
-/* harmony import */ var _revivejs_angular_loading__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @stackline/angular-loading */ "RQOp");
-/* harmony import */ var _revivejs_angular_loading__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_revivejs_angular_loading__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _stackline_angular_loading__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @stackline/angular-loading */ "RQOp");
+/* harmony import */ var _stackline_angular_loading__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_stackline_angular_loading__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var _data_api__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./data/api */ "bTD8");
 /* harmony import */ var _data_release_line__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./data/release-line */ "Bzxo");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
@@ -291,7 +291,7 @@ let AppComponent = class AppComponent {
     }
 };
 AppComponent.ctorParameters = () => [
-    { type: _revivejs_angular_loading__WEBPACK_IMPORTED_MODULE_3__["LoadingService"] }
+    { type: _stackline_angular_loading__WEBPACK_IMPORTED_MODULE_3__["LoadingService"] }
 ];
 AppComponent = __decorate([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["Component"])({
@@ -299,7 +299,7 @@ AppComponent = __decorate([
         template: _raw_loader_app_component_html__WEBPACK_IMPORTED_MODULE_0__["default"],
         styles: [_app_component_css__WEBPACK_IMPORTED_MODULE_1__["default"]]
     }),
-    __metadata("design:paramtypes", [_revivejs_angular_loading__WEBPACK_IMPORTED_MODULE_3__["LoadingService"]])
+    __metadata("design:paramtypes", [_stackline_angular_loading__WEBPACK_IMPORTED_MODULE_3__["LoadingService"]])
 ], AppComponent);
 
 
@@ -332,8 +332,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/platform-browser */ "jhN1");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "fXoL");
 /* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/forms */ "3Pt+");
-/* harmony import */ var _revivejs_angular_loading__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @stackline/angular-loading */ "RQOp");
-/* harmony import */ var _revivejs_angular_loading__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_revivejs_angular_loading__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _stackline_angular_loading__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @stackline/angular-loading */ "RQOp");
+/* harmony import */ var _stackline_angular_loading__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_stackline_angular_loading__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./app.component */ "Sy1n");
 /* harmony import */ var _playground_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./playground.component */ "qfjc");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
@@ -356,7 +356,7 @@ AppModule = __decorate([
         imports: [
             _angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["BrowserModule"],
             _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormsModule"],
-            _revivejs_angular_loading__WEBPACK_IMPORTED_MODULE_3__["LoadingModule"].forRoot()
+            _stackline_angular_loading__WEBPACK_IMPORTED_MODULE_3__["LoadingModule"].forRoot()
         ],
         bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_4__["AppComponent"]]
     })
@@ -835,4 +835,3 @@ webpackEmptyAsyncContext.id = "zn8P";
 /***/ })
 
 },[[0,"runtime","vendor"]]]);
-//# sourceMappingURL=main.js.map

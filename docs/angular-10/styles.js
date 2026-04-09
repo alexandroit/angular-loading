@@ -7,7 +7,7 @@
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /tmp/revivejs-angular-loading-docs-10-EU7w7t/src/styles.css */"OmL/");
+module.exports = __webpack_require__(/*! /tmp/stackline-angular-loading-docs-10-EU7w7t/src/styles.css */"OmL/");
 
 
 /***/ }),
@@ -449,4 +449,3 @@ ___CSS_LOADER_EXPORT___.push([module.i, "html,\nbody {\n  margin: 0;\n  min-heig
 /***/ })
 
 },[[2,"runtime"]]]);
-//# sourceMappingURL=styles.js.map

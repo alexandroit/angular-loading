@@ -141,4 +141,3 @@ var LoadingComponent = /** @class */ (function () {
     return LoadingComponent;
 }());
 exports.LoadingComponent = LoadingComponent;
-//# sourceMappingURL=LoadingComponent.js.map

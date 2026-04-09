@@ -97,4 +97,3 @@ var LoadingController = /** @class */ (function () {
     return LoadingController;
 }());
 exports.LoadingController = LoadingController;
-//# sourceMappingURL=LoadingController.js.map
