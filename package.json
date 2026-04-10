@@ -30,7 +30,8 @@
     "build:docs": "npm run build:legacy && npm run docs:generate && npm run build:docs:angular-2 && npm run build:docs:angular-21 && node scripts/write-docs-root.js",
     "release:line": "node scripts/release-angular-line.js",
     "release:sequence": "node scripts/release-angular-sequence.js",
-    "serve:docs": "python3 -m http.server 8081 --directory docs"
+    "serve:docs": "python3 -m http.server 8081 --directory docs",
+    "test": "node --test tests/*.test.cjs"
   },
   "repository": {
     "type": "git",

@@ -607,6 +607,67 @@ pre,
   }
 }
 
+/* stackline-docs-wrap-fix-2026 */
+.hero-main h1,
+.hero h1,
+.page-header h1,
+.docs-hero h1,
+article h1:first-child {
+  max-width: 100%;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+  line-height: 1.02;
+}
+
+.hero-card,
+.panel,
+.sidebar-card,
+.demo-card,
+.preview-frame,
+.surface-card,
+.table-shell,
+.install-card,
+.copy-card,
+.card-shell,
+.showcase-card,
+.docs-card,
+.docs-panel {
+  min-width: 0;
+}
+
+.badge,
+.hero-badge,
+.version-pill,
+.release-pill {
+  max-width: 100%;
+  white-space: normal;
+  overflow-wrap: anywhere;
+}
+
+@media (max-width: 640px) {
+  .hero-main h1,
+  .hero h1,
+  .page-header h1,
+  .docs-hero h1,
+  article h1:first-child {
+    font-size: clamp(2rem, 11vw, 3.15rem);
+  }
+}
+
+/* stackline-docs-mobile-title-fix-2026 */
+@media (max-width: 640px) {
+  .hero-main h1,
+  .hero h1,
+  .page-header h1,
+  .docs-hero h1,
+  article h1:first-child {
+    font-size: clamp(1.7rem, 8vw, 2.65rem) !important;
+    line-height: 0.98 !important;
+    letter-spacing: -0.035em !important;
+    word-break: break-all;
+  }
+}
+
 
 /* stackline-docs-mobile-layout-fix-2026 */
 .hero-main h1,
