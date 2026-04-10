@@ -1,0 +1,231 @@
+<article class="panel" id="playground">
+  <div class="panel-header">
+    <h2>Playground</h2>
+    <p>Use the Angular wrapper against the same kind of interactive preview shell as the core docs.</p>
+  </div>
+
+  <div class="playground-shell">
+    <form class="playground-controls">
+      <div class="field">
+        <label for="playground-variant">Variant</label>
+        <select id="playground-variant"
+                name="variant"
+                [(ngModel)]="state.variant"
+                (ngModelChange)="applyPlaygroundState()">
+          <option *ngFor="let variant of variants" [value]="variant.value">{{ variant.label }}</option>
+        </select>
+      </div>
+
+      <div class="field">
+        <label for="playground-size">Size <span>{{ state.size }}px</span></label>
+        <input id="playground-size"
+               name="size"
+               type="range"
+               min="18"
+               max="96"
+               [(ngModel)]="state.size"
+               (ngModelChange)="applyPlaygroundState()" />
+      </div>
+
+      <div class="field">
+        <label for="playground-speed">Speed <span>{{ state.speed }}ms</span></label>
+        <input id="playground-speed"
+               name="speed"
+               type="range"
+               min="300"
+               max="2200"
+               step="50"
+               [(ngModel)]="state.speed"
+               (ngModelChange)="applyPlaygroundState()" />
+      </div>
+
+      <div class="field two-up">
+        <div>
+          <label for="playground-color">Primary</label>
+          <input id="playground-color"
+                 name="color"
+                 type="color"
+                 [(ngModel)]="state.color"
+                 (ngModelChange)="applyPlaygroundState()" />
+        </div>
+        <div>
+          <label for="playground-secondary-color">Secondary</label>
+          <input id="playground-secondary-color"
+                 name="secondaryColor"
+                 type="color"
+                 [(ngModel)]="state.secondaryColor"
+                 (ngModelChange)="applyPlaygroundState()" />
+        </div>
+      </div>
+
+      <div class="field">
+        <label for="playground-label">Label</label>
+        <input id="playground-label"
+               name="label"
+               type="text"
+               [(ngModel)]="state.label"
+               (ngModelChange)="applyPlaygroundState()" />
+      </div>
+
+      <div class="field two-up">
+        <div>
+          <label for="playground-delay">Delay</label>
+          <input id="playground-delay"
+                 name="delay"
+                 type="number"
+                 min="0"
+                 step="50"
+                 [(ngModel)]="state.delay"
+                 (ngModelChange)="applyPlaygroundState()" />
+        </div>
+        <div>
+          <label for="playground-min-visible">Min visible</label>
+          <input id="playground-min-visible"
+                 name="minVisible"
+                 type="number"
+                 min="0"
+                 step="50"
+                 [(ngModel)]="state.minVisible"
+                 (ngModelChange)="applyPlaygroundState()" />
+        </div>
+      </div>
+
+      <div class="toggle-row">
+        <label><input type="checkbox" name="overlay" [(ngModel)]="state.overlay" (ngModelChange)="applyPlaygroundState()" /> Overlay</label>
+        <label><input type="checkbox" name="fullscreen" [(ngModel)]="state.fullscreen" (ngModelChange)="applyPlaygroundState()" /> Fullscreen</label>
+        <label><input type="checkbox" name="centered" [(ngModel)]="state.centered" (ngModelChange)="applyPlaygroundState()" /> Centered</label>
+        <label><input type="checkbox" name="reducedMotion" [(ngModel)]="state.reducedMotion" (ngModelChange)="applyPlaygroundState()" /> Reduced motion</label>
+      </div>
+
+      <div class="playground-actions">
+        <button type="button" (click)="replayTiming()">Replay timing</button>
+        <button type="button" class="ghost-button" (click)="copyCode()">{{ copyButtonLabel }}</button>
+      </div>
+    </form>
+
+    <div class="playground-preview">
+      <div class="playground-preview-tabs" role="tablist" aria-label="Preview surfaces">
+        <button *ngFor="let surface of surfaces"
+                type="button"
+                role="tab"
+                class="playground-preview-tab"
+                [class.is-active]="isSurfaceActive(surface.id)"
+                [attr.aria-selected]="isSurfaceActive(surface.id)"
+                (click)="setSurface(surface.id)">
+          {{ surface.label }}
+        </button>
+      </div>
+
+      <p class="playground-description">{{ getActiveSurfaceDescription() }}</p>
+
+      <div class="playground-stage" [class.is-reduced-motion]="state.reducedMotion">
+        <div class="playground-stage-inner" [ngSwitch]="activeSurface">
+          <div *ngSwitchCase="'default'"
+               class="playground-surface playground-surface--clean"
+               [class.is-fullscreen-simulated]="state.fullscreen"
+               [stacklineLoading]="previewVisible"
+               [loadingOptions]="previewOptions"></div>
+
+          <div *ngSwitchCase="'dashboard'"
+               class="playground-surface surface-card-grid"
+               [class.is-fullscreen-simulated]="state.fullscreen"
+               [stacklineLoading]="previewVisible"
+               [loadingOptions]="previewOptions">
+            <div class="surface-card-cell"></div>
+            <div class="surface-card-cell"></div>
+            <div class="surface-card-cell wide"></div>
+          </div>
+
+          <div *ngSwitchCase="'table'"
+               class="playground-surface surface-table"
+               [class.is-fullscreen-simulated]="state.fullscreen"
+               [stacklineLoading]="previewVisible"
+               [loadingOptions]="previewOptions">
+            <div class="playground-table-head">
+              <span>Status</span>
+              <span>Customer</span>
+              <span>Plan</span>
+              <span>MRR</span>
+            </div>
+            <div class="playground-table-row">
+              <span><i></i></span>
+              <span><i></i></span>
+              <span><i></i></span>
+              <span><i></i></span>
+            </div>
+            <div class="playground-table-row">
+              <span><i></i></span>
+              <span><i></i></span>
+              <span><i></i></span>
+              <span><i></i></span>
+            </div>
+            <div class="playground-table-row">
+              <span><i></i></span>
+              <span><i></i></span>
+              <span><i></i></span>
+              <span><i></i></span>
+            </div>
+            <div class="playground-table-row">
+              <span><i></i></span>
+              <span><i></i></span>
+              <span><i></i></span>
+              <span><i></i></span>
+            </div>
+          </div>
+
+          <div *ngSwitchCase="'page'"
+               class="playground-surface surface-page"
+               [class.is-fullscreen-simulated]="state.fullscreen"
+               [stacklineLoading]="previewVisible"
+               [loadingOptions]="previewOptions">
+            <div class="page-topbar"></div>
+            <div class="page-grid">
+              <div class="page-tile"></div>
+              <div class="page-tile"></div>
+              <div class="page-tile"></div>
+              <div class="page-tile"></div>
+            </div>
+          </div>
+
+          <div *ngSwitchCase="'modal'" class="playground-surface surface-modal" [class.is-fullscreen-simulated]="state.fullscreen">
+            <div class="modal-shell">
+              <div class="modal-header"></div>
+              <div class="modal-body"
+                   [stacklineLoading]="previewVisible"
+                   [loadingOptions]="previewOptions">
+                <div class="modal-line"></div>
+                <div class="modal-line short"></div>
+                <div class="modal-line"></div>
+              </div>
+            </div>
+          </div>
+
+          <div *ngSwitchCase="'chart'"
+               class="playground-surface surface-chart"
+               [class.is-fullscreen-simulated]="state.fullscreen"
+               [stacklineLoading]="previewVisible"
+               [loadingOptions]="previewOptions">
+            <div class="chart-bar" style="height: 28%"></div>
+            <div class="chart-bar" style="height: 46%"></div>
+            <div class="chart-bar" style="height: 60%"></div>
+            <div class="chart-bar" style="height: 38%"></div>
+            <div class="chart-bar" style="height: 72%"></div>
+            <div class="chart-bar" style="height: 55%"></div>
+          </div>
+
+          <div *ngSwitchDefault
+               class="playground-surface surface-upload"
+               [class.is-fullscreen-simulated]="state.fullscreen"
+               [stacklineLoading]="previewVisible"
+               [loadingOptions]="previewOptions">
+            <div class="upload-icon"></div>
+            <div class="upload-title">Drop files here</div>
+            <div class="upload-caption">PNG, SVG, PDF up to 25 MB</div>
+          </div>
+        </div>
+      </div>
+
+      <pre class="code-block code-preview"><code>{{ generatedCode }}</code></pre>
+    </div>
+  </div>
+</article>

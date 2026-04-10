@@ -120,7 +120,7 @@ let AppComponent = class AppComponent {
             { label: 'Angular 21', href: '../angular-21/', docsPath: '/angular-21/' }
         ];
         this.logs = [];
-        this.installSnippet = "npm install @stackline/angular-loading";
+        this.installSnippet = "npm install @stackline/angular-loading@8";
         this.moduleSnippet = "import { LoadingModule } from '@stackline/angular-loading';\n\n@NgModule({\n  imports: [LoadingModule.forRoot()]\n})";
         this.directiveSnippet = "<div [stacklineLoading]=\"isLoading\"\n     [loadingOptions]=\"{ overlay: true }\">\n  ...\n</div>";
         this.componentSnippet = "<stackline-loading\n  [visible]=\"true\"\n  [options]=\"basicOptions\">\n</stackline-loading>";
@@ -841,9 +841,10 @@ Object(_angular_platform_browser_dynamic__WEBPACK_IMPORTED_MODULE_0__["platformB
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /tmp/stackline-angular-loading-docs-8-iGIWTt/src/main.ts */"./src/main.ts");
+module.exports = __webpack_require__(/*! /tmp/stackline-angular-loading-docs-8-ouNTy9/src/main.ts */"./src/main.ts");
 
 
 /***/ })
 
 },[[0,"runtime","vendor"]]]);
+//# sourceMappingURL=main.js.map

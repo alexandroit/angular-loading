@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>@stackline/angular-loading · Angular 2</title>
+    <base href="./" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="./styles.css" />
+    <script src="https://unpkg.com/core-js@2.6.12/client/shim.min.js"></script>
+    <script src="https://unpkg.com/zone.js@0.7.8/dist/zone.js"></script>
+    <script src="https://unpkg.com/reflect-metadata@0.1.13/Reflect.js"></script>
+    <script src="https://unpkg.com/systemjs@0.19.47/dist/system.src.js"></script>
+    <script src="./systemjs.config.js"></script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6353624842390947"
+     crossorigin="anonymous"></script>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-3KQ9KECXR9"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-3KQ9KECXR9');
+</script>
+</head>
+  <body>
+    <app-root>
+      <div class="boot-shell">
+        <div class="boot-card">
+          <div class="boot-loader"></div>
+          <p>Booting Angular 2 docs…</p>
+        </div>
+      </div>
+    </app-root>
+    <script>
+      System.import('app').catch(function (error) {
+        console.error(error);
+        document.body.innerHTML = '<pre style="padding:16px;white-space:pre-wrap;">' + String(error) + '</pre>';
+      });
+    </script>
+  </body>
+  </html>

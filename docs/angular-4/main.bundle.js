@@ -92,7 +92,7 @@ var AppComponent = (function () {
             { label: 'Angular 21', href: '../angular-21/', docsPath: '/angular-21/' }
         ];
         this.logs = [];
-        this.installSnippet = "npm install @stackline/angular-loading";
+        this.installSnippet = "npm install @stackline/angular-loading@4";
         this.moduleSnippet = "import { LoadingModule } from '@stackline/angular-loading';\n\n@NgModule({\n  imports: [LoadingModule.forRoot()]\n})";
         this.directiveSnippet = "<div [stacklineLoading]=\"isLoading\"\n     [loadingOptions]=\"{ overlay: true }\">\n  ...\n</div>";
         this.componentSnippet = "<stackline-loading\n  [visible]=\"true\"\n  [options]=\"basicOptions\">\n</stackline-loading>";
@@ -249,6 +249,7 @@ AppComponent = __decorate([
 ], AppComponent);
 
 var _a;
+//# sourceMappingURL=app.component.js.map
 
 /***/ }),
 
@@ -293,6 +294,7 @@ AppModule = __decorate([
     })
 ], AppModule);
 
+//# sourceMappingURL=app.module.js.map
 
 /***/ }),
 
@@ -315,6 +317,7 @@ var API_CARDS = [
         summary: 'Create and control fullscreen or ad-hoc loaders programmatically from your Angular services or components.'
     }
 ];
+//# sourceMappingURL=api.js.map
 
 /***/ }),
 
@@ -330,6 +333,7 @@ var RELEASE_LINE = {
     runtimeTarget: 'Angular 4 + Angular CLI',
     docsPath: '/angular-4/'
 };
+//# sourceMappingURL=release-line.js.map
 
 /***/ }),
 
@@ -727,6 +731,7 @@ PlaygroundComponent = __decorate([
     __metadata("design:paramtypes", [])
 ], PlaygroundComponent);
 
+//# sourceMappingURL=playground.component.js.map
 
 /***/ }),
 
@@ -738,6 +743,7 @@ PlaygroundComponent = __decorate([
 var environment = {
     production: false
 };
+//# sourceMappingURL=environment.js.map
 
 /***/ }),
 
@@ -770,6 +776,7 @@ Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* pl
     ].filter(Boolean).join('\n');
     document.body.innerHTML = '<pre style="padding:16px;white-space:pre-wrap;">' + details.replace(/</g, '&lt;') + '</pre>';
 });
+//# sourceMappingURL=main.js.map
 
 /***/ }),
 
@@ -782,3 +789,4 @@ module.exports = __webpack_require__("../../../../../src/main.ts");
 /***/ })
 
 },[0]);
+//# sourceMappingURL=main.bundle.js.map

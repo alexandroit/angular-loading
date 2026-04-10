@@ -7,7 +7,7 @@
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /tmp/stackline-angular-loading-docs-11-FpKq3H/src/main.ts */"zUnb");
+module.exports = __webpack_require__(/*! /tmp/stackline-angular-loading-docs-11-MSNfB9/src/main.ts */"zUnb");
 
 
 /***/ }),
@@ -102,7 +102,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _raw_loader_app_component_html__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! raw-loader!./app.component.html */ "VzVu");
 /* harmony import */ var _app_component_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./app.component.css */ "A3xY");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/core */ "fXoL");
-/* harmony import */ var _stackline_angular_loading__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @stackline/angular-loading */ "RQOp");
+/* harmony import */ var _stackline_angular_loading__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @stackline/angular-loading */ "/qfS");
 /* harmony import */ var _stackline_angular_loading__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_stackline_angular_loading__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var _data_api__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./data/api */ "bTD8");
 /* harmony import */ var _data_release_line__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./data/release-line */ "Bzxo");
@@ -148,7 +148,7 @@ let AppComponent = class AppComponent {
             { label: 'Angular 21', href: '../angular-21/', docsPath: '/angular-21/' }
         ];
         this.logs = [];
-        this.installSnippet = "npm install @stackline/angular-loading";
+        this.installSnippet = "npm install @stackline/angular-loading@11";
         this.moduleSnippet = "import { LoadingModule } from '@stackline/angular-loading';\n\n@NgModule({\n  imports: [LoadingModule.forRoot()]\n})";
         this.directiveSnippet = "<div [stacklineLoading]=\"isLoading\"\n     [loadingOptions]=\"{ overlay: true }\">\n  ...\n</div>";
         this.componentSnippet = "<stackline-loading\n  [visible]=\"true\"\n  [options]=\"basicOptions\">\n</stackline-loading>";
@@ -332,7 +332,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/platform-browser */ "jhN1");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "fXoL");
 /* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/forms */ "3Pt+");
-/* harmony import */ var _stackline_angular_loading__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @stackline/angular-loading */ "RQOp");
+/* harmony import */ var _stackline_angular_loading__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @stackline/angular-loading */ "/qfS");
 /* harmony import */ var _stackline_angular_loading__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_stackline_angular_loading__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./app.component */ "Sy1n");
 /* harmony import */ var _playground_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./playground.component */ "qfjc");
@@ -835,3 +835,4 @@ webpackEmptyAsyncContext.id = "zn8P";
 /***/ })
 
 },[[0,"runtime","vendor"]]]);
+//# sourceMappingURL=main.js.map
