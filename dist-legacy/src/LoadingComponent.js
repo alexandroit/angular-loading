@@ -83,7 +83,7 @@ var LoadingComponent = /** @class */ (function () {
         var host = this.resolveHostElement();
         if (!host) {
             if (required) {
-                throw new Error('Unable to resolve revive-loading host element.');
+                throw new Error('Unable to resolve stackline-loading host element.');
             }
             return null;
         }
@@ -132,7 +132,7 @@ var LoadingComponent = /** @class */ (function () {
     ], LoadingComponent.prototype, "hostId", void 0);
     LoadingComponent = LoadingComponent_1 = __decorate([
         (0, core_1.Component)({
-            selector: 'revive-loading',
+            selector: 'stackline-loading',
             standalone: false,
             template: ''
         }),

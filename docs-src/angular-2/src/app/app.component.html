@@ -96,7 +96,7 @@
             <div class="preview-frame component-frame"
                  (create)="onCreate('Standalone component')"
                  (shown)="onShown('Standalone component')">
-              <revive-loading [visible]="true" [options]="basicOptions"></revive-loading>
+              <stackline-loading [visible]="true" [options]="basicOptions"></stackline-loading>
             </div>
           </section>
 
@@ -113,7 +113,7 @@
               <button (click)="toggleOverlay()">Toggle overlay</button>
             </div>
             <div class="surface-card"
-                 [reviveLoading]="overlayVisible"
+                 [stacklineLoading]="overlayVisible"
                  [loadingOptions]="overlayOptions"
                  (create)="onCreate('Card overlay')"
                  (shown)="onShown('Card overlay')"
@@ -129,7 +129,7 @@
             <p>The directive also works well on buttons with compact inline variants and no visible label.</p>
             <div class="controls">
               <button class="primary-action"
-                      [reviveLoading]="buttonLoading"
+                      [stacklineLoading]="buttonLoading"
                       [loadingOptions]="buttonOptions"
                       (click)="triggerButton()"
                       (shown)="onShown('Button loader')"
@@ -160,7 +160,7 @@
               <button (click)="refreshTable()">Refresh table</button>
             </div>
             <div class="table-shell"
-                 [reviveLoading]="tableVisible"
+                 [stacklineLoading]="tableVisible"
                  [loadingOptions]="tableOptions"
                  (shown)="onShown('Table refresh')"
                  (hidden)="onHidden('Table refresh')">

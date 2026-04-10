@@ -14,7 +14,7 @@ import { LoadingController } from './LoadingController';
 import { AngularLoadingEvent, AngularLoadingOptions } from './types';
 
 @Component({
-  selector: 'revive-loading',
+  selector: 'stackline-loading',
   standalone: false,
   template: ''
 })
@@ -111,7 +111,7 @@ export class LoadingComponent implements AfterViewInit, OnChanges, OnDestroy {
 
     if (!host) {
       if (required) {
-        throw new Error('Unable to resolve revive-loading host element.');
+        throw new Error('Unable to resolve stackline-loading host element.');
       }
 
       return null;

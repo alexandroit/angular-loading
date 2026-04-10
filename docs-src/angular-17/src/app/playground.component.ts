@@ -273,10 +273,10 @@ export class PlaygroundComponent {
   private buildTemplateSnippet(): string {
     if (this.activeSurface === 'default' && !this.state.overlay) {
       return [
-        '<revive-loading',
+        '<stackline-loading',
         '  [visible]="isLoading"',
         '  [options]="loadingOptions">',
-        '</revive-loading>'
+        '</stackline-loading>'
       ].join('\n');
     }
 
@@ -285,7 +285,7 @@ export class PlaygroundComponent {
         '<div class="modal-shell">',
         '  <div class="modal-header"></div>',
         '  <div class="modal-body"',
-        '       [reviveLoading]="isLoading"',
+        '       [stacklineLoading]="isLoading"',
         '       [loadingOptions]="loadingOptions">',
         '    <div class="modal-line"></div>',
         '    <div class="modal-line short"></div>',
@@ -298,7 +298,7 @@ export class PlaygroundComponent {
     if (this.activeSurface === 'table') {
       return [
         '<div class="table-shell"',
-        '     [reviveLoading]="isLoading"',
+        '     [stacklineLoading]="isLoading"',
         '     [loadingOptions]="loadingOptions">',
         '  <div class="table-head">',
         '    <span>Status</span>',
@@ -315,7 +315,7 @@ export class PlaygroundComponent {
     if (this.activeSurface === 'chart') {
       return [
         '<div class="chart-panel"',
-        '     [reviveLoading]="isLoading"',
+        '     [stacklineLoading]="isLoading"',
         '     [loadingOptions]="loadingOptions">',
         '  <div class="chart-bar"></div>',
         '  <div class="chart-bar"></div>',
@@ -327,7 +327,7 @@ export class PlaygroundComponent {
     if (this.activeSurface === 'upload') {
       return [
         '<div class="upload-zone"',
-        '     [reviveLoading]="isLoading"',
+        '     [stacklineLoading]="isLoading"',
         '     [loadingOptions]="loadingOptions">',
         '  <div class="upload-icon"></div>',
         '  <p>Drop files here</p>',
@@ -338,7 +338,7 @@ export class PlaygroundComponent {
     if (this.activeSurface === 'page') {
       return [
         '<section class="page-shell"',
-        '         [reviveLoading]="isLoading"',
+        '         [stacklineLoading]="isLoading"',
         '         [loadingOptions]="loadingOptions">',
         '  <header class="page-topbar"></header>',
         '  <div class="page-grid">...</div>',
@@ -348,7 +348,7 @@ export class PlaygroundComponent {
 
     return [
       '<section class="dashboard-cards"',
-      '         [reviveLoading]="isLoading"',
+      '         [stacklineLoading]="isLoading"',
       '         [loadingOptions]="loadingOptions">',
       '  <div class="card"></div>',
       '  <div class="card"></div>',

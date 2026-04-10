@@ -38,8 +38,8 @@ export class AppComponent {
   logs: string[] = [];
   installSnippet: string = "npm install @stackline/angular-loading@16";
   moduleSnippet: string = "import { LoadingModule } from '@stackline/angular-loading';\n\n@NgModule({\n  imports: [LoadingModule.forRoot()]\n})";
-  directiveSnippet: string = "<div [reviveLoading]=\"isLoading\"\n     [loadingOptions]=\"{ overlay: true }\">\n  ...\n</div>";
-  componentSnippet: string = "<revive-loading\n  [visible]=\"true\"\n  [options]=\"basicOptions\">\n</revive-loading>";
+  directiveSnippet: string = "<div [stacklineLoading]=\"isLoading\"\n     [loadingOptions]=\"{ overlay: true }\">\n  ...\n</div>";
+  componentSnippet: string = "<stackline-loading\n  [visible]=\"true\"\n  [options]=\"basicOptions\">\n</stackline-loading>";
   serviceSnippet: string = "this.fullscreenLoader = this.loadingService.create(document.body, {\n  fullscreen: true,\n  centered: true,\n  variant: 'galaxy'\n});\n\nthis.fullscreenLoader.show();";
   copyLabels: { [key: string]: string } = {
     install: 'Copy',

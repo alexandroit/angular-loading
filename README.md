@@ -26,8 +26,8 @@
 
 It gives Angular teams three practical integration paths:
 
-- `<revive-loading>` when the loader itself is the primary thing being rendered
-- `[reviveLoading]` when an existing card, table, button, modal, or section should become busy
+- `<stackline-loading>` when the loader itself is the primary thing being rendered
+- `[stacklineLoading]` when an existing card, table, button, modal, or section should become busy
 - `LoadingService` when the loading state is fullscreen, global, or fully programmatic
 
 The wrapper stays intentionally thin so the real power continues to live in the core package:
@@ -122,7 +122,7 @@ export class AppModule {}
 ### 2. Use the component directly
 
 ```html
-<revive-loading
+<stackline-loading
   [visible]="true"
   [options]="{
     variant: 'orbit',
@@ -130,14 +130,14 @@ export class AppModule {}
     centered: true,
     label: 'Loading preview'
   }">
-</revive-loading>
+</stackline-loading>
 ```
 
 ### 3. Or turn an existing host into a loading surface
 
 ```html
 <div
-  [reviveLoading]="isLoading"
+  [stacklineLoading]="isLoading"
   [loadingOptions]="{
     overlay: true,
     centered: true,
@@ -153,11 +153,11 @@ export class AppModule {}
 
 ### Component
 
-Use `<revive-loading>` when the loader itself is the thing being rendered.
+Use `<stackline-loading>` when the loader itself is the thing being rendered.
 
 ### Directive
 
-Use `[reviveLoading]` for:
+Use `[stacklineLoading]` for:
 
 - cards
 - tables
@@ -217,7 +217,7 @@ Methods:
 
 Inputs:
 
-- `reviveLoading`
+- `stacklineLoading`
 - `loadingOptions`
 
 Outputs:

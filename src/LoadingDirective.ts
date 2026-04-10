@@ -14,13 +14,13 @@ import { LoadingController } from './LoadingController';
 import { AngularLoadingEvent, AngularLoadingOptions } from './types';
 
 @Directive({
-  selector: '[reviveLoading]',
+  selector: '[stacklineLoading]',
   standalone: false
 })
 export class LoadingDirective implements AfterViewInit, OnChanges, OnDestroy {
   private static nextHostId: number = 0;
 
-  @Input('reviveLoading') visible: boolean = false;
+  @Input('stacklineLoading') visible: boolean = false;
   @Input() loadingOptions: AngularLoadingOptions = {};
 
   @Output() create = new EventEmitter<AngularLoadingEvent>();
@@ -90,7 +90,7 @@ export class LoadingDirective implements AfterViewInit, OnChanges, OnDestroy {
 
     if (!host) {
       if (required) {
-        throw new Error('Unable to resolve reviveLoading host element.');
+        throw new Error('Unable to resolve stacklineLoading host element.');
       }
 
       return null;

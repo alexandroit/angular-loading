@@ -123,13 +123,13 @@
           <div *ngSwitchCase="'default'"
                class="playground-surface playground-surface--clean"
                [class.is-fullscreen-simulated]="state.fullscreen"
-               [reviveLoading]="previewVisible"
+               [stacklineLoading]="previewVisible"
                [loadingOptions]="previewOptions"></div>
 
           <div *ngSwitchCase="'dashboard'"
                class="playground-surface surface-card-grid"
                [class.is-fullscreen-simulated]="state.fullscreen"
-               [reviveLoading]="previewVisible"
+               [stacklineLoading]="previewVisible"
                [loadingOptions]="previewOptions">
             <div class="surface-card-cell"></div>
             <div class="surface-card-cell"></div>
@@ -139,7 +139,7 @@
           <div *ngSwitchCase="'table'"
                class="playground-surface surface-table"
                [class.is-fullscreen-simulated]="state.fullscreen"
-               [reviveLoading]="previewVisible"
+               [stacklineLoading]="previewVisible"
                [loadingOptions]="previewOptions">
             <div class="playground-table-head">
               <span>Status</span>
@@ -176,7 +176,7 @@
           <div *ngSwitchCase="'page'"
                class="playground-surface surface-page"
                [class.is-fullscreen-simulated]="state.fullscreen"
-               [reviveLoading]="previewVisible"
+               [stacklineLoading]="previewVisible"
                [loadingOptions]="previewOptions">
             <div class="page-topbar"></div>
             <div class="page-grid">
@@ -191,7 +191,7 @@
             <div class="modal-shell">
               <div class="modal-header"></div>
               <div class="modal-body"
-                   [reviveLoading]="previewVisible"
+                   [stacklineLoading]="previewVisible"
                    [loadingOptions]="previewOptions">
                 <div class="modal-line"></div>
                 <div class="modal-line short"></div>
@@ -203,7 +203,7 @@
           <div *ngSwitchCase="'chart'"
                class="playground-surface surface-chart"
                [class.is-fullscreen-simulated]="state.fullscreen"
-               [reviveLoading]="previewVisible"
+               [stacklineLoading]="previewVisible"
                [loadingOptions]="previewOptions">
             <div class="chart-bar" style="height: 28%"></div>
             <div class="chart-bar" style="height: 46%"></div>
@@ -216,7 +216,7 @@
           <div *ngSwitchDefault
                class="playground-surface surface-upload"
                [class.is-fullscreen-simulated]="state.fullscreen"
-               [reviveLoading]="previewVisible"
+               [stacklineLoading]="previewVisible"
                [loadingOptions]="previewOptions">
             <div class="upload-icon"></div>
             <div class="upload-title">Drop files here</div>

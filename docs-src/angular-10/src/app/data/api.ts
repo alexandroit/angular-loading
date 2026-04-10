@@ -1,11 +1,11 @@
 export const API_CARDS = [
   {
     title: 'LoadingComponent',
-    summary: 'Use <revive-loading> when the loader itself is part of the template or needs to wrap projected content.'
+    summary: 'Use <stackline-loading> when the loader itself is part of the template or needs to wrap projected content.'
   },
   {
     title: 'LoadingDirective',
-    summary: 'Use [reviveLoading] on cards, buttons, forms, and arbitrary host elements for overlay and inline patterns.'
+    summary: 'Use [stacklineLoading] on cards, buttons, forms, and arbitrary host elements for overlay and inline patterns.'
   },
   {
     title: 'LoadingService',

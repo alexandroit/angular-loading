@@ -76276,7 +76276,7 @@ var LoadingComponent = /** @class */ (function () {
         var host = this.resolveHostElement();
         if (!host) {
             if (required) {
-                throw new Error('Unable to resolve revive-loading host element.');
+                throw new Error('Unable to resolve stackline-loading host element.');
             }
             return null;
         }
@@ -76325,7 +76325,7 @@ var LoadingComponent = /** @class */ (function () {
     ], LoadingComponent.prototype, "hostId", void 0);
     LoadingComponent = LoadingComponent_1 = __decorate([
         (0, core_1.Component)({
-            selector: 'revive-loading',
+            selector: 'stackline-loading',
             standalone: false,
             template: ''
         }),
@@ -76517,7 +76517,7 @@ var LoadingDirective = /** @class */ (function () {
         var host = this.resolveHostElement();
         if (!host) {
             if (required) {
-                throw new Error('Unable to resolve reviveLoading host element.');
+                throw new Error('Unable to resolve stacklineLoading host element.');
             }
             return null;
         }
@@ -76533,7 +76533,7 @@ var LoadingDirective = /** @class */ (function () {
     var LoadingDirective_1;
     LoadingDirective.nextHostId = 0;
     __decorate([
-        (0, core_1.Input)('reviveLoading'),
+        (0, core_1.Input)('stacklineLoading'),
         __metadata("design:type", Boolean)
     ], LoadingDirective.prototype, "visible", void 0);
     __decorate([
@@ -76566,7 +76566,7 @@ var LoadingDirective = /** @class */ (function () {
     ], LoadingDirective.prototype, "hostId", void 0);
     LoadingDirective = LoadingDirective_1 = __decorate([
         (0, core_1.Directive)({
-            selector: '[reviveLoading]',
+            selector: '[stacklineLoading]',
             standalone: false
         }),
         __metadata("design:paramtypes", [])
@@ -79208,7 +79208,7 @@ function parseOptions(element) {
   return options;
 }
 function hydrateLoaders(root = document) {
-  const hosts = Array.from(root.querySelectorAll("[data-revive-loading]"));
+  const hosts = Array.from(root.querySelectorAll("[data-stackline-loading]"));
   return hosts.map((host) => {
     const loader = createLoader(__spreadProps(__spreadValues({}, parseOptions(host)), {
       target: host,

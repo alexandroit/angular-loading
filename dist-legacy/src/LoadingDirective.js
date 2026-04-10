@@ -68,7 +68,7 @@ var LoadingDirective = /** @class */ (function () {
         var host = this.resolveHostElement();
         if (!host) {
             if (required) {
-                throw new Error('Unable to resolve reviveLoading host element.');
+                throw new Error('Unable to resolve stacklineLoading host element.');
             }
             return null;
         }
@@ -84,7 +84,7 @@ var LoadingDirective = /** @class */ (function () {
     var LoadingDirective_1;
     LoadingDirective.nextHostId = 0;
     __decorate([
-        (0, core_1.Input)('reviveLoading'),
+        (0, core_1.Input)('stacklineLoading'),
         __metadata("design:type", Boolean)
     ], LoadingDirective.prototype, "visible", void 0);
     __decorate([
@@ -117,7 +117,7 @@ var LoadingDirective = /** @class */ (function () {
     ], LoadingDirective.prototype, "hostId", void 0);
     LoadingDirective = LoadingDirective_1 = __decorate([
         (0, core_1.Directive)({
-            selector: '[reviveLoading]',
+            selector: '[stacklineLoading]',
             standalone: false
         }),
         __metadata("design:paramtypes", [])
