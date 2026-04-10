@@ -45,3 +45,14 @@ body {
     transform: rotate(360deg);
   }
 }
+
+
+/* stackline-docs-refresh-2026 */
+html,
+body {
+  background:
+    radial-gradient(circle at top right, rgba(63, 81, 181, 0.14), transparent 28%),
+    linear-gradient(180deg, #f8f9fc 0%, #f5f7fb 44%, #eef2f8 100%);
+  color: #212121;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}

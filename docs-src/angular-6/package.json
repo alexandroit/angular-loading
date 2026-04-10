@@ -14,7 +14,7 @@
     "@angular/forms": "6.1.10",
     "@angular/platform-browser": "6.1.10",
     "@angular/platform-browser-dynamic": "6.1.10",
-    "@stackline/angular-loading": "file:../..",
+    "@stackline/angular-loading": "6.0.0",
     "core-js": "2.4.1",
     "rxjs": "6.2.2",
     "zone.js": "0.8.26",

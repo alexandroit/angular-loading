@@ -539,7 +539,7 @@ if(false) {}
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /tmp/stackline-angular-loading-docs-6-RX9Qph/src/styles.css */"./src/styles.css");
+module.exports = __webpack_require__(/*! /tmp/stackline-angular-loading-docs-6-jAMc4L/src/styles.css */"./src/styles.css");
 
 
 /***/ })

@@ -35,7 +35,7 @@ export class AppComponent {
     { label: 'Angular 21', href: '../angular-21/', docsPath: '/angular-21/' }
   ];
   logs: string[] = [];
-  installSnippet: string = "npm install @stackline/angular-loading@6";
+  installSnippet: string = "npm install @stackline/angular-loading@2";
   moduleSnippet: string = "import { LoadingModule } from '@stackline/angular-loading';\n\n@NgModule({\n  imports: [LoadingModule.forRoot()]\n})";
   directiveSnippet: string = "<div [stacklineLoading]=\"isLoading\"\n     [loadingOptions]=\"{ overlay: true }\">\n  ...\n</div>";
   componentSnippet: string = "<stackline-loading\n  [visible]=\"true\"\n  [options]=\"basicOptions\">\n</stackline-loading>";

@@ -14,7 +14,7 @@
     "@angular/forms": "20.3.18",
     "@angular/platform-browser": "20.3.18",
     "@angular/platform-browser-dynamic": "20.3.18",
-    "@stackline/angular-loading": "file:../..",
+    "@stackline/angular-loading": "20.0.0",
     "core-js": "2.6.12",
     "rxjs": "7.8.2",
     "zone.js": "0.15.1",

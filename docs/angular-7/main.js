@@ -809,7 +809,7 @@ Object(_angular_platform_browser_dynamic__WEBPACK_IMPORTED_MODULE_0__["platformB
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /tmp/stackline-angular-loading-docs-7-P6NauV/src/main.ts */"./src/main.ts");
+module.exports = __webpack_require__(/*! /tmp/stackline-angular-loading-docs-7-zMlpv4/src/main.ts */"./src/main.ts");
 
 
 /***/ })

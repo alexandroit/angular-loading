@@ -14,7 +14,7 @@
     "@angular/forms": "17.3.12",
     "@angular/platform-browser": "17.3.12",
     "@angular/platform-browser-dynamic": "17.3.12",
-    "@stackline/angular-loading": "file:../..",
+    "@stackline/angular-loading": "17.0.0",
     "core-js": "2.6.12",
     "rxjs": "7.8.2",
     "zone.js": "0.14.10",

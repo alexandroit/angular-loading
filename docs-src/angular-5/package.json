@@ -14,7 +14,7 @@
     "@angular/forms": "5.2.11",
     "@angular/platform-browser": "5.2.11",
     "@angular/platform-browser-dynamic": "5.2.11",
-    "@stackline/angular-loading": "file:../..",
+    "@stackline/angular-loading": "5.0.0",
     "core-js": "2.4.1",
     "rxjs": "5.5.12",
     "zone.js": "0.8.29",
