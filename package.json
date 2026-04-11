@@ -87,7 +87,7 @@
   "bugs": {
     "url": "https://github.com/alexandroit/angular-loading/issues"
   },
-  "homepage": "https://alexandroit.github.io/angular-loading/",
+  "homepage": "https://alexandro.net/docs/angular/angular-loading/",
   "peerDependencies": {
     "@angular/common": ">=21.0.0 <22.0.0",
     "@angular/core": ">=21.0.0 <22.0.0",
