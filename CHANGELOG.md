@@ -4,6 +4,10 @@ All notable changes to `@stackline/angular-loading` are documented here.
 
 ## [Unreleased]
 
+- Classified non-current documentation families as compatibility fixtures while
+  keeping the maintained framework line buildable and audited.
+- Added a checked-in lockfile, patched development-server overrides, and an
+  exact advisory gate for the maintained Angular 21 documentation application.
 - Moved exact-version dependency records to `package.fixture.json`, repaired
   their validators, and added an offline catalog contract to keep historical
   metadata out of active dependency alerts.

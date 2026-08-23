@@ -36,6 +36,9 @@ jobs:
       - run: npm test
       - run: npm run build
       - run: npm audit --audit-level=low
+      - name: Build and audit maintained documentation
+        if: matrix.node == '22.22.3'
+        run: npm run build:docs
       - name: Build release artifact
         if: matrix.node == '22.22.3'
         run: |

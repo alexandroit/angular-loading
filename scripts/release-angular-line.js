@@ -180,7 +180,11 @@ function validateDocsLine(line, tarballPath) {
   const tempDocsDir = fs.mkdtempSync(path.join(os.tmpdir(), `stackline-angular-loading-docs-${line}-`));
   const tempBuildDir = path.join(tempDocsDir, 'dist-docs');
   const packageJsonPath = path.join(tempDocsDir, 'package.json');
-  const docsPackageJson = readJson(path.join(docsSourceDir, 'package.json'));
+  const activeManifest = path.join(docsSourceDir, 'package.json');
+  const fixtureManifest = path.join(docsSourceDir, 'package.fixture.json');
+  const docsPackageJson = readJson(
+    fs.existsSync(activeManifest) ? activeManifest : fixtureManifest
+  );
 
   copyDir(docsSourceDir, tempDocsDir);
 

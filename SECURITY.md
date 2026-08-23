@@ -6,6 +6,14 @@ Security fixes are released for the maintained `@stackline/angular-loading`
 version lines documented in the README. Use the latest patch release available
 for the Angular line used by your application.
 
+The maintained Angular 21 documentation application has a checked-in lockfile.
+Overrides patch its development server and UUID dependency. Angular's Less
+compiler still reaches `image-size`, whose two high-severity parser advisories
+do not have a patched upstream release. Documentation builds do not process
+untrusted images, and this development-only path is absent from the published
+package. The audit gate accepts only those exact advisories and rejects every
+other finding or newly available compatible fix.
+
 ## Reporting a vulnerability
 
 Report suspected vulnerabilities privately through

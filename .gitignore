@@ -3,6 +3,7 @@ docs-src/**/node_modules/
 docs-src/**/.angular/
 docs-src/**/dist/
 docs-src/**/package-lock.json
+!docs-src/angular-21/package-lock.json
 dist/
 *.log
 *.tgz

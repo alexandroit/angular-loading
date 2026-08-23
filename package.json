@@ -21,6 +21,7 @@
   ],
   "scripts": {
     "test:fixtures": "node tools/stackline-run-release-smoke.mjs --catalog",
+    "audit:docs": "node tools/stackline-audit-angular-build.mjs docs-src/angular-21",
     "build": "npm run build:legacy && npm run build:lib",
     "build:legacy": "tsc -p tsconfig.legacy.json",
     "build:lib": "ng-packagr -p ng-package.json",

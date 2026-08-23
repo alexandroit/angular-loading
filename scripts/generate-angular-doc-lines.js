@@ -7,6 +7,7 @@ const rootDir = path.resolve(__dirname, '..');
 const angular2SrcDir = path.join(rootDir, 'docs-src', 'angular-2', 'src');
 const angular2AppDir = path.join(angular2SrcDir, 'app');
 const rootPackage = JSON.parse(fs.readFileSync(path.join(rootDir, 'package.json'), 'utf8'));
+const currentMajor = Number.parseInt(rootPackage.version, 10);
 const legacyVariantValues = [
   'ring',
   'dual-ring',
@@ -54,12 +55,16 @@ function ensureDirectory(targetPath) {
   fs.mkdirSync(targetPath);
 }
 
-function resetGeneratedDirectory(targetPath) {
+function resetGeneratedDirectory(targetPath, preserveLockfile = false) {
   if (!fs.existsSync(targetPath)) {
     return;
   }
 
   fs.readdirSync(targetPath).forEach((entry) => {
+    if (preserveLockfile && entry === 'package-lock.json') {
+      return;
+    }
+
     const entryPath = path.join(targetPath, entry);
     const stat = fs.lstatSync(entryPath);
 
@@ -510,7 +515,7 @@ function createPackageJson(line, config) {
       ? `ng build --configuration production --output-path ../../docs/angular-${line} --base-href ./`
       : `ng build --output-path ../../docs/angular-${line} --base-href ./ --build-optimizer=false --vendor-chunk=true --named-chunks=true --aot=false`;
 
-  return JSON.stringify({
+  const packageJson = {
     name: `@stackline/angular-loading-docs-angular${line}`,
     version: '1.0.0',
     private: true,
@@ -521,7 +526,16 @@ function createPackageJson(line, config) {
     },
     dependencies,
     devDependencies
-  }, null, 2) + '\n';
+  };
+
+  if (line === currentMajor) {
+    packageJson.overrides = {
+      uuid: '11.1.1',
+      'webpack-dev-server': '5.2.6'
+    };
+  }
+
+  return JSON.stringify(packageJson, null, 2) + '\n';
 }
 
 function createReleaseLine(line, config) {
@@ -545,10 +559,13 @@ function generateLine(line) {
   const targetSrcDir = path.join(targetDir, 'src');
   const targetAppDir = path.join(targetSrcDir, 'app');
 
-  resetGeneratedDirectory(targetDir);
+  resetGeneratedDirectory(targetDir, line === currentMajor);
   ensureDirectory(targetAppDir);
 
-  writeFile(path.join(targetDir, 'package.json'), createPackageJson(line, config));
+  const manifestName = line === currentMajor
+    ? 'package.json'
+    : 'package.fixture.json';
+  writeFile(path.join(targetDir, manifestName), createPackageJson(line, config));
 
   if (line >= 8) {
     writeFile(path.join(targetDir, 'browserslist'), createBrowserslist());

@@ -1,5 +1,6 @@
+const fs = require('fs');
 const path = require('path');
-const { execSync } = require('child_process');
+const { execFileSync, execSync } = require('child_process');
 
 const { getAngularDocLine } = require('./angular-doc-lines');
 
@@ -14,7 +15,12 @@ if (!action || !line || !getAngularDocLine(line)) {
 const targetDir = path.join(__dirname, '..', 'docs-src', `angular-${line}`);
 
 if (action === 'install') {
-  execSync('npm install --ignore-scripts --no-audit', {
+  const lockfile = path.join(targetDir, 'package-lock.json');
+  const installCommand = fs.existsSync(lockfile)
+    ? 'npm ci --ignore-scripts --no-audit'
+    : 'npm install --ignore-scripts --no-audit';
+
+  execSync(installCommand, {
     cwd: targetDir,
     stdio: 'inherit'
   });
@@ -22,12 +28,15 @@ if (action === 'install') {
     cwd: targetDir,
     stdio: 'inherit'
   });
-  execSync('npm prune --ignore-scripts --omit=optional --no-audit', {
+  execSync('npm prune --ignore-scripts --omit=optional --no-audit --package-lock=false', {
     cwd: targetDir,
     stdio: 'inherit'
   });
-  execSync('npm audit --omit=optional --audit-level=high', {
-    cwd: targetDir,
+  execFileSync(process.execPath, [
+    path.join(__dirname, '..', 'tools', 'stackline-audit-angular-build.mjs'),
+    targetDir
+  ], {
+    cwd: path.join(__dirname, '..'),
     stdio: 'inherit'
   });
   process.exit(0);
