@@ -14,6 +14,19 @@ untrusted images, and this development-only path is absent from the published
 package. The audit gate accepts only those exact advisories and rejects every
 other finding or newly available compatible fix.
 
+## Historical documentation artifacts
+
+The versioned bundles under `docs/angular-*` are generated outputs retained to
+preserve previously published Angular compatibility examples. They are not
+package source, are not imported by the maintained implementation, and are not
+included in the npm package.
+
+For end-of-life Angular lines, replacing a bundled framework or compiler would
+change the compatibility target. Static-analysis findings confined to those
+immutable generated files are reviewed against their actual input flow and may
+be classified with an explicit GitHub rationale. Findings in maintained source,
+current examples, or reachable application behavior remain actionable.
+
 ## Reporting a vulnerability
 
 Report suspected vulnerabilities privately through
