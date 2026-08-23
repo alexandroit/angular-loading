@@ -8,7 +8,7 @@
     "build": "node ./node_modules/@angular/cli/bin/ng build --output-path ../../docs/angular-8 --base-href ./ --es5BrowserSupport=false --build-optimizer=false --vendor-chunk=true --named-chunks=true --aot=false"
   },
   "dependencies": {
-    "@angular/common": "8.2.14",
+    "@angular/common": "20.3.27",
     "@angular/compiler": "8.2.14",
     "@angular/core": "8.2.14",
     "@angular/forms": "8.2.14",
