@@ -27,6 +27,10 @@ immutable generated files are reviewed against their actual input flow and may
 be classified with an explicit GitHub rationale. Findings in maintained source,
 current examples, or reachable application behavior remain actionable.
 
+CodeQL scans the package source, release scripts, tools, tests, and maintained
+Angular 21 documentation source. Generated documentation bundles and superseded
+documentation projects are excluded from analysis.
+
 ## Reporting a vulnerability
 
 Report suspected vulnerabilities privately through

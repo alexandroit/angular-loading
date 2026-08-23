@@ -1,0 +1,9 @@
+name: Maintained source configuration
+
+paths:
+  - src
+  - scripts
+  - tools
+  - tests
+  - docs-src/angular-21/src
+  - index.ts
