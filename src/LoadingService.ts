@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { createLoader, hideLoader, mountLoader, showLoader } from '@stackline/loading';
+import { createLoader, hideLoader, mountLoader, showLoader } from '@stackline/loading-core';
 
 import { AngularLoadingOptions } from './types';
 

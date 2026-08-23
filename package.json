@@ -1,7 +1,7 @@
 {
   "name": "@stackline/angular-loading",
   "version": "21.0.0",
-  "description": "Maintained Angular wrapper components, directives, and service helpers for @stackline/loading.",
+  "description": "Maintained Angular wrapper components, directives, and service helpers for @stackline/loading-core.",
   "main": "./dist/fesm2022/stackline-angular-loading.mjs",
   "module": "./dist/fesm2022/stackline-angular-loading.mjs",
   "types": "./dist/types/stackline-angular-loading.d.ts",
@@ -14,6 +14,8 @@
   },
   "files": [
     "dist",
+    "CHANGELOG.md",
+    "SECURITY.md",
     "README.md",
     "LICENSE"
   ],
@@ -26,7 +28,7 @@
     "docs:install:angular-21": "node scripts/run-angular-doc-line.js install 21",
     "build:docs:angular-2": "node scripts/build-docs-angular-2.js",
     "build:docs:angular-21": "node scripts/run-angular-doc-line.js build 21",
-    "build:docs": "npm run build:legacy && npm run docs:generate && npm run build:docs:angular-2 && npm run build:docs:angular-21 && node scripts/write-docs-root.js",
+    "build:docs": "npm run build && npm run docs:generate && npm run docs:install:angular-21 && npm run build:docs:angular-2 && npm run build:docs:angular-21 && node scripts/write-docs-root.js",
     "release:line": "node scripts/release-angular-line.js",
     "release:sequence": "node scripts/release-angular-sequence.js",
     "serve:docs": "python3 -m http.server 8081 --directory docs",
@@ -94,7 +96,7 @@
     "@angular/platform-browser": ">=21.0.0 <22.0.0"
   },
   "dependencies": {
-    "@stackline/loading": "^0.1.1"
+    "@stackline/loading-core": "^1.0.1"
   },
   "devDependencies": {
     "@angular/common": "^21.2.7",

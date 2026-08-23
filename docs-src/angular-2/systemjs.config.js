@@ -32,7 +32,7 @@
       ts: 'npm:plugin-typescript@5.3.3/lib/plugin.js',
       typescript: 'npm:typescript@2.4.2/lib/typescript.js',
       '@stackline/angular-loading': 'vendor/angular-loading',
-      '@stackline/loading': 'vendor/loading'
+      '@stackline/loading-core': 'vendor/loading'
     },
     packages: {
       app: {
@@ -46,7 +46,7 @@
         main: './index.js',
         defaultExtension: 'js'
       },
-      '@stackline/loading': {
+      '@stackline/loading-core': {
         main: './index.js',
         defaultExtension: 'js'
       }

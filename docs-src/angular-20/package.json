@@ -15,10 +15,9 @@
     "@angular/platform-browser": "20.3.18",
     "@angular/platform-browser-dynamic": "20.3.18",
     "@stackline/angular-loading": "20.0.0",
-    "core-js": "2.6.12",
     "rxjs": "7.8.2",
     "zone.js": "0.15.1",
-    "@stackline/loading": "^0.1.1",
+    "@stackline/loading-core": "^1.0.1",
     "tslib": "2.3.0"
   },
   "devDependencies": {

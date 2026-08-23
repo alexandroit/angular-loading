@@ -8,25 +8,24 @@
     "build": "node ./node_modules/@angular/cli/bin/ng build --configuration production --output-path ../../docs/angular-21 --base-href ./"
   },
   "dependencies": {
-    "@angular/common": "21.2.7",
-    "@angular/compiler": "21.2.7",
-    "@angular/core": "21.2.7",
-    "@angular/forms": "21.2.7",
-    "@angular/platform-browser": "21.2.7",
-    "@angular/platform-browser-dynamic": "21.2.7",
-    "@stackline/angular-loading": "21.0.0",
-    "core-js": "2.6.12",
+    "@angular/common": "21.2.21",
+    "@angular/compiler": "21.2.21",
+    "@angular/core": "21.2.21",
+    "@angular/forms": "21.2.21",
+    "@angular/platform-browser": "21.2.21",
+    "@angular/platform-browser-dynamic": "21.2.21",
+    "@stackline/angular-loading": "file:../../dist",
     "rxjs": "7.8.2",
     "zone.js": "0.16.1",
-    "@stackline/loading": "^0.1.1",
+    "@stackline/loading-core": "^1.0.1",
     "tslib": "2.3.0"
   },
   "devDependencies": {
-    "@angular/cli": "21.2.6",
-    "@angular/compiler-cli": "21.2.7",
+    "@angular/cli": "21.2.21",
+    "@angular/compiler-cli": "21.2.21",
     "@types/node": "12.12.54",
     "typescript": "5.9.3",
-    "@angular-devkit/build-angular": "21.2.6",
+    "@angular-devkit/build-angular": "21.2.21",
     "@types/minimatch": "3.0.3"
   }
 }

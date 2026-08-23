@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 
-import { loaderVariants } from '@stackline/loading';
+import { loaderVariants } from '@stackline/loading-core';
 
 interface PlaygroundVariant {
   value: string;

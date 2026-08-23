@@ -1,4 +1,4 @@
-import { createLoader } from '@stackline/loading';
+import { createLoader } from '@stackline/loading-core';
 import { AngularLoadingEvent, AngularLoadingOptions, LoadingLifecycleHooks } from './types';
 
 export class LoadingController {

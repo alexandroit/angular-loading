@@ -8,7 +8,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.LoadingService = void 0;
 var core_1 = require("@angular/core");
-var loading_1 = require("@stackline/loading");
+var loading_core_1 = require("@stackline/loading-core");
 var LoadingService = /** @class */ (function () {
     function LoadingService() {
     }
@@ -17,20 +17,20 @@ var LoadingService = /** @class */ (function () {
             target: target,
             visible: false
         });
-        var instance = (0, loading_1.createLoader)(nextOptions);
+        var instance = (0, loading_core_1.createLoader)(nextOptions);
         if (options && options.visible) {
             instance.show();
         }
         return instance;
     };
     LoadingService.prototype.show = function (target, options) {
-        return (0, loading_1.showLoader)(target, options || {});
+        return (0, loading_core_1.showLoader)(target, options || {});
     };
     LoadingService.prototype.mount = function (target, options) {
-        return (0, loading_1.mountLoader)(target, options || {});
+        return (0, loading_core_1.mountLoader)(target, options || {});
     };
     LoadingService.prototype.hide = function (instance) {
-        return (0, loading_1.hideLoader)(instance);
+        return (0, loading_core_1.hideLoader)(instance);
     };
     LoadingService = __decorate([
         (0, core_1.Injectable)()

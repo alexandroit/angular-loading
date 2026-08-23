@@ -15,7 +15,6 @@
     "@angular/platform-browser": "11.2.14",
     "@angular/platform-browser-dynamic": "11.2.14",
     "@stackline/angular-loading": "11.0.0",
-    "core-js": "2.6.12",
     "rxjs": "6.6.7",
     "zone.js": "0.11.8",
     "tslib": "2.0.0"

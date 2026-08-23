@@ -183,9 +183,9 @@ const angularDocLines = {
     usesAngularJson: true
   },
   21: {
-    angular: '21.2.7',
-    cli: '21.2.6',
-    devkit: '21.2.6',
+    angular: '21.2.21',
+    cli: '21.2.21',
+    devkit: '21.2.21',
     typescript: '5.9.3',
     rxjs: '7.8.2',
     zone: '0.16.1',

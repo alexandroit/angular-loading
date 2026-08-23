@@ -14,7 +14,19 @@ if (!action || !line || !getAngularDocLine(line)) {
 const targetDir = path.join(__dirname, '..', 'docs-src', `angular-${line}`);
 
 if (action === 'install') {
-  execSync('npm install --ignore-scripts', {
+  execSync('npm install --ignore-scripts --no-audit', {
+    cwd: targetDir,
+    stdio: 'inherit'
+  });
+  execSync('npm rebuild esbuild', {
+    cwd: targetDir,
+    stdio: 'inherit'
+  });
+  execSync('npm prune --ignore-scripts --omit=optional --no-audit', {
+    cwd: targetDir,
+    stdio: 'inherit'
+  });
+  execSync('npm audit --omit=optional --audit-level=high', {
     cwd: targetDir,
     stdio: 'inherit'
   });
@@ -24,6 +36,10 @@ if (action === 'install') {
 if (action === 'build') {
   execSync('npm run build', {
     cwd: targetDir,
+    env: {
+      ...process.env,
+      ESBUILD_BINARY_PATH: path.join(targetDir, 'node_modules', 'esbuild', 'bin', 'esbuild')
+    },
     stdio: 'inherit'
   });
   process.exit(0);

@@ -1,6 +1,6 @@
 # @stackline/angular-loading
 
-> A maintained Angular wrapper for **@stackline/loading** with a declarative component API, a host directive for overlays and inline states, and a service for fullscreen or programmatic loaders.
+> A maintained Angular wrapper for **@stackline/loading-core** with a declarative component API, a host directive for overlays and inline states, and a service for fullscreen or programmatic loaders.
 
 [![npm version](https://img.shields.io/npm/v/@stackline/angular-loading.svg?style=flat-square)](https://www.npmjs.com/package/@stackline/angular-loading)
 [![npm downloads](https://img.shields.io/npm/dt/@stackline/angular-loading.svg?style=flat-square)](https://www.npmjs.com/package/@stackline/angular-loading)
@@ -16,7 +16,7 @@
 
 ---
 
-> **Built on top of:** [@stackline/loading](https://www.npmjs.com/package/@stackline/loading), the framework-agnostic Stackline loading toolkit with modern variants, delay and minimum visible duration handling, accessibility defaults, and themeable CSS variables.
+> **Built on top of:** [@stackline/loading-core](https://www.npmjs.com/package/@stackline/loading-core), the framework-agnostic Stackline loading toolkit with modern variants, delay and minimum visible duration handling, accessibility defaults, and themeable CSS variables.
 
 ---
 
@@ -32,7 +32,7 @@ It gives Angular teams three practical integration paths:
 
 The wrapper stays intentionally thin so the real power continues to live in the core package:
 
-- polished variants from `@stackline/loading`
+- polished variants from `@stackline/loading-core`
 - delay and `minVisible` anti-flicker behavior
 - inline, overlay, container, and fullscreen modes
 - accessibility defaults and visible labels
@@ -68,7 +68,7 @@ Each package family only installs on its matching Angular family. Framework majo
 
 | Package family | Framework family | Peer range | Tested release window | Demo link |
 | :---: | :---: | :---: | :---: | :--- |
-| **21.x** | **Angular 21 only** | **`>=21.0.0 <22.0.0`** | **21.0.0 -> 21.2.8** | [Angular 21 family docs](https://alexandro.net/docs/angular/angular-loading/angular-21/) |
+| **21.x** | **Angular 21 only** | **`>=21.0.0 <22.0.0`** | **21.0.0 -> 21.2.21** | [Angular 21 family docs](https://alexandro.net/docs/angular/angular-loading/angular-21/) |
 | **20.x** | **Angular 20 only** | **`>=20.0.0 <21.0.0`** | **20.0.0 -> 20.3.18** | [Angular 20 family docs](https://alexandro.net/docs/angular/angular-loading/angular-20/) |
 | **19.x** | **Angular 19 only** | **`>=19.0.0 <20.0.0`** | **19.0.0 -> 19.2.20** | [Angular 19 family docs](https://alexandro.net/docs/angular/angular-loading/angular-19/) |
 | **18.x** | **Angular 18 only** | **`>=18.0.0 <19.0.0`** | **18.0.0 -> 18.2.14** | [Angular 18 family docs](https://alexandro.net/docs/angular/angular-loading/angular-18/) |
@@ -261,6 +261,11 @@ Angular 2 remains available at:
 ```text
 http://127.0.0.1:8081/angular-2/
 ```
+
+## Security
+
+Report vulnerabilities privately by following [SECURITY.md](SECURITY.md). Do
+not disclose exploit details in a public issue.
 
 ## License
 

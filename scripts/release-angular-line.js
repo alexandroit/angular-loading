@@ -75,7 +75,7 @@ function createLegacyPackage(line) {
   const version = `${line}.0.0`;
   const tempDir = fs.mkdtempSync(path.join(os.tmpdir(), `stackline-angular-loading-${version}-`));
   const distLegacyDir = path.join(rootDir, 'dist-legacy');
-  const coreEntry = path.join(rootDir, 'node_modules', '@stackline', 'loading', 'dist', 'index.js');
+  const coreEntry = path.join(rootDir, 'node_modules', '@stackline', 'loading-core', 'dist', 'index.js');
   const vendorDir = path.join(tempDir, 'vendor');
   const vendorEntry = path.join(vendorDir, 'loading.js');
   const packageJsonPath = path.join(tempDir, 'package.json');
@@ -119,7 +119,7 @@ function createLegacyPackage(line) {
   writeJson(packageJsonPath, {
     name: packageName,
     version,
-    description: 'Maintained Angular wrapper components, directives, and service helpers for @stackline/loading.',
+    description: 'Maintained Angular wrapper components, directives, and service helpers for @stackline/loading-core.',
     main: './index.js',
     types: './index.d.ts',
     sideEffects: false,

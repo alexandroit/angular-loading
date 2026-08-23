@@ -112,11 +112,11 @@ function createPlaygroundComponentTs(line) {
 
   if (line >= 13) {
     contents = contents
-      .replace("declare var require: any;\n\nvar loadingCore: any = require('@stackline/loading');\n", "import { loaderVariants } from '@stackline/loading';\n")
+      .replace("declare var require: any;\n\nvar loadingCore: any = require('@stackline/loading-core');\n", "import { loaderVariants } from '@stackline/loading-core';\n")
       .replace('(loadingCore.loaderVariants || [])', '(loaderVariants || [])');
   } else {
     contents = contents.replace(
-      "declare var require: any;\n\nvar loadingCore: any = require('@stackline/loading');\n",
+      "declare var require: any;\n\nvar loadingCore: any = require('@stackline/loading-core');\n",
       [
         'var legacyVariantValues: string[] = ' + JSON.stringify(legacyVariantValues) + ';',
         '',
@@ -148,7 +148,7 @@ function createPlaygroundComponentTs(line) {
 
 function createAppComponentHtml() {
   return readAngular2AppFile('app.component.html')
-    .replace('Angular 2.4 · @stackline/loading 0.1.1', 'Angular {{ releaseLine.angular }} · @stackline/loading {{ releaseLine.coreVersion }}')
+    .replace('Angular 2.4 · @stackline/loading-core 0.1.1', 'Angular {{ releaseLine.angular }} · @stackline/loading-core {{ releaseLine.coreVersion }}')
     .replace('A thin Angular 2 wrapper around the Stackline loading toolkit.', 'A maintained Angular wrapper around the Stackline loading toolkit.')
     .replace('The first Angular line covers the most practical loading patterns for enterprise apps and SaaS screens.', 'This Angular line covers the most practical loading patterns for enterprise apps and SaaS screens.')
     .replace('<div class="preview-frame component-frame"\n                 (create)="onCreate(\'Standalone component\')"\n                 (shown)="onShown(\'Standalone component\')">\n              <stackline-loading [visible]="true" [options]="basicOptions"></stackline-loading>\n            </div>', '<div class="preview-frame component-frame">\n              <stackline-loading\n                [visible]="true"\n                [options]="basicOptions"\n                (create)="onCreate(\'Standalone component\')"\n                (shown)="onShown(\'Standalone component\')"></stackline-loading>\n            </div>');
@@ -163,6 +163,16 @@ function createIndexHtml(line) {
     `    <title>@stackline/angular-loading · Angular ${line}</title>`,
     '    <base href="./" />',
     '    <meta name="viewport" content="width=device-width, initial-scale=1" />',
+    '    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6353624842390947" crossorigin="anonymous"></script>',
+    '    <!-- Google tag (gtag.js) -->',
+    '    <script async src="https://www.googletagmanager.com/gtag/js?id=G-3KQ9KECXR9"></script>',
+    '    <script>',
+    '      window.dataLayer = window.dataLayer || [];',
+    '      function gtag(){dataLayer.push(arguments);}',
+    "      gtag('js', new Date());",
+    '',
+    "      gtag('config', 'G-3KQ9KECXR9');",
+    '    </script>',
     '  </head>',
     '  <body>',
     '    <app-root>',
@@ -208,10 +218,12 @@ function createMainTs() {
 }
 
 function createPolyfills(line) {
-  const lines = [
-    "import 'core-js/es6/reflect';",
-    "import 'core-js/es7/reflect';"
-  ];
+  const lines = [];
+
+  if (line <= 7) {
+    lines.push("import 'core-js/es6/reflect';");
+    lines.push("import 'core-js/es7/reflect';");
+  }
 
   if (line >= 17) {
     lines.push("import 'zone.js';");
@@ -350,7 +362,7 @@ function createAngularJson(line) {
     optionLines.push(
       '            "allowedCommonJsDependencies": [',
       '              "@stackline/angular-loading",',
-      '              "@stackline/loading"',
+      '              "@stackline/loading-core"',
       '            ]'
     );
   }
@@ -460,14 +472,19 @@ function createPackageJson(line, config) {
     '@angular/forms': `${config.angular}`,
     '@angular/platform-browser': `${config.angular}`,
     '@angular/platform-browser-dynamic': `${config.angular}`,
-    '@stackline/angular-loading': `${line}.0.0`,
-    'core-js': `${config.coreJs}`,
+    '@stackline/angular-loading': line === Number(rootPackage.version.split('.')[0])
+      ? 'file:../../dist'
+      : `${line}.0.0`,
     rxjs: `${config.rxjs}`,
     'zone.js': `${config.zone}`
   };
 
+  if (line <= 7) {
+    dependencies['core-js'] = `${config.coreJs}`;
+  }
+
   if (line >= 13) {
-    dependencies['@stackline/loading'] = rootPackage.dependencies['@stackline/loading'];
+    dependencies['@stackline/loading-core'] = rootPackage.dependencies['@stackline/loading-core'];
   }
 
   if (line <= 7) {
@@ -519,7 +536,7 @@ function createReleaseLine(line, config) {
     'export const RELEASE_LINE = {',
     `  angular: '${angularParts[0]}.${angularParts[1]}.x',`,
     `  packageVersion: '${line}.0.0',`,
-    `  coreVersion: '${String(rootPackage.dependencies['@stackline/loading']).replace(/^[^0-9]*/, '')}',`,
+    `  coreVersion: '${String(rootPackage.dependencies['@stackline/loading-core']).replace(/^[^0-9]*/, '')}',`,
     `  runtimeTarget: 'Angular ${line} + Angular CLI',`,
     `  docsPath: '/angular-${line}/'`,
     '};',

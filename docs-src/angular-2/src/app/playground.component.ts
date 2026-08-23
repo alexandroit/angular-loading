@@ -3,7 +3,7 @@ import { Component } from '@angular/core';
 declare var module: { id: string };
 declare var require: any;
 
-var loadingCore: any = require('@stackline/loading');
+var loadingCore: any = require('@stackline/loading-core');
 
 interface PlaygroundVariant {
   value: string;

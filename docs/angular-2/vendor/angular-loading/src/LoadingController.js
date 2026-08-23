@@ -1,7 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.LoadingController = void 0;
-var loading_1 = require("@stackline/loading");
+var loading_core_1 = require("@stackline/loading-core");
 var LoadingController = /** @class */ (function () {
     function LoadingController(host, hooks) {
         this.host = host;
@@ -16,7 +16,7 @@ var LoadingController = /** @class */ (function () {
         }
         this.lastOptions = this.cloneOptions(options);
         this.lastVisible = !!visible;
-        this.instance = (0, loading_1.createLoader)(this.toCoreOptions(this.lastOptions));
+        this.instance = (0, loading_core_1.createLoader)(this.toCoreOptions(this.lastOptions));
         this.hooks.onCreate(this.toEvent(this.lastOptions, this.lastVisible));
         this.syncVisibility(this.lastVisible);
     };
