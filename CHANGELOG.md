@@ -4,6 +4,9 @@ All notable changes to `@stackline/angular-loading` are documented here.
 
 ## [Unreleased]
 
+- Moved exact-version dependency records to `package.fixture.json`, repaired
+  their validators, and added an offline catalog contract to keep historical
+  metadata out of active dependency alerts.
 - Replaced the removed `@stackline/loading` dependency with the maintained
   `@stackline/loading-core` package without changing the Angular wrapper API.
 - Refreshed the Angular 21 lockfile to remove known dependency advisories.

@@ -54,7 +54,7 @@ function ensureDirectory(targetPath) {
   fs.mkdirSync(targetPath);
 }
 
-function removeDirectory(targetPath) {
+function resetGeneratedDirectory(targetPath) {
   if (!fs.existsSync(targetPath)) {
     return;
   }
@@ -63,20 +63,15 @@ function removeDirectory(targetPath) {
     const entryPath = path.join(targetPath, entry);
     const stat = fs.lstatSync(entryPath);
 
-    if (stat.isSymbolicLink()) {
-      fs.unlinkSync(entryPath);
+    if (
+      stat.isDirectory() &&
+      fs.existsSync(path.join(entryPath, 'stackline-release.json'))
+    ) {
       return;
     }
 
-    if (stat.isDirectory()) {
-      removeDirectory(entryPath);
-      return;
-    }
-
-    fs.unlinkSync(entryPath);
+    fs.rmSync(entryPath, { recursive: true, force: true });
   });
-
-  fs.rmdirSync(targetPath);
 }
 
 function writeFile(targetPath, contents) {
@@ -550,7 +545,7 @@ function generateLine(line) {
   const targetSrcDir = path.join(targetDir, 'src');
   const targetAppDir = path.join(targetSrcDir, 'app');
 
-  removeDirectory(targetDir);
+  resetGeneratedDirectory(targetDir);
   ensureDirectory(targetAppDir);
 
   writeFile(path.join(targetDir, 'package.json'), createPackageJson(line, config));
